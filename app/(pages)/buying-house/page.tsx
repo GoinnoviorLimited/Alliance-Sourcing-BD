@@ -25,10 +25,9 @@ export default function BuyingHousePage() {
       <PageHeader
         title="Professional Buying & Sourcing Services"
         subtitle="State-of-the-art facilities meeting the highest global ethical and quality standards through innovation and precision"
-        backgroundImage="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/HomePage.png-fDfquMd0QVp5xfeF5epKSZTVCIcu4o.jpeg"
+        backgroundImage="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3105a5e1e47bd6c51724d9ef89fd867243462197-jU21omSUdf2kP7KEQVK23sTylm4Hqd.jpg"
         breadcrumbs={[
           { label: "Home", href: "/" },
-          { label: "Our Service", href: "/" },
           { label: "Buying House Services" },
         ]}
       />

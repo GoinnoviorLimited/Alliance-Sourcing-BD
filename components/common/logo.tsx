@@ -9,7 +9,7 @@ export function Logo() {
           src="/logo.jpg"
           alt="Alliance Sourcing BD"
           fill
-          className="object-contain rounded-full"
+          className="object-contain rounded-md"
           priority
         />
       </div>

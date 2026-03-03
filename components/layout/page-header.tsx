@@ -16,7 +16,7 @@ export function PageHeader({
 }: PageHeaderProps) {
   return (
     <div
-      className="relative py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-cover bg-center"
+      className="relative py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-cover bg-center flex flex-col justify-center items-center text-center"
       style={
         backgroundImage
           ? { backgroundImage: `url(${backgroundImage})` }
@@ -27,7 +27,7 @@ export function PageHeader({
       <div className="absolute inset-0 bg-black/60"></div>
 
       {/* Content */}
-      <div className="relative max-w-7xl mx-auto">
+      <div className="relative flex flex-col justify-center items-center text-center">
         {breadcrumbs && (
           <div className="mb-4">
             <Breadcrumb items={breadcrumbs} />

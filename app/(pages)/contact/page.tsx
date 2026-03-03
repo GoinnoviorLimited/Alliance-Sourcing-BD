@@ -22,6 +22,7 @@ export default function ContactPage() {
       {/* Page Header */}
       <PageHeader
         title="Get in Touch"
+        backgroundImage="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3105a5e1e47bd6c51724d9ef89fd867243462197-jU21omSUdf2kP7KEQVK23sTylm4Hqd.jpg"
         subtitle="We're here to answer your questions and discuss your sourcing needs"
         breadcrumbs={[
           { label: "Home", href: "/" },

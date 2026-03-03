@@ -26,7 +26,6 @@ export default function FactoryMachineryPage() {
         backgroundImage="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/01354e3d797db6485a78760f4b0ddcbf51eaa4ad-629hMlVHw0rkTHnUUXOW1MXT2M5XU1.png"
         breadcrumbs={[
           { label: "Home", href: "/" },
-          { label: "Home", href: "/" },
           { label: "Factory & Machinery" },
         ]}
       />
