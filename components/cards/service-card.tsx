@@ -15,7 +15,6 @@ export function ServiceCard({ title, description, icon }: ServiceCardProps) {
         </h3>
         <p className="text-slate-600 group-hover:text-white leading-relaxed">{description}</p>
       </div>
-      {/* <div className="h-1 bg-gradient-to-r from-cyan-500 to-cyan-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300" /> */}
     </div>
   );
 }

@@ -35,7 +35,7 @@ export function CTASection({
       <div className="absolute inset-0 bg-black/30"></div>
 
       {/* Content */}
-      <SectionWrapper className="relative text-center">
+      <SectionWrapper className="py-5 lg:py-10 xl:py-12 relative text-center md:border border-white rounded-lg">
         <h2 
           className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight animate-in fade-in slide-in-from-bottom-8 duration-700"
           style={{ fontFamily: 'var(--font-syne)' }}
