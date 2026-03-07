@@ -4,6 +4,7 @@ import { FeaturesGrid } from "@/components/sections/features-grid";
 import { CTASection } from "@/components/sections/cta-section";
 import { SectionWrapper } from "@/components/common/section-wrapper";
 import { HOW_WE_WORK, VALUES, CONTACT_INFO } from "@/lib/constants";
+import HowWeWork from "@/components/sections/HowWeWork";
 
 export const metadata: Metadata = {
   title: "About Alliance Sourcing BD | Our Story & Values",
@@ -80,7 +81,7 @@ export default function AboutPage() {
       </div>
 
       {/* Process Section */}
-      
+      <HowWeWork/>
 
       {/* CTA */}
       <CTASection

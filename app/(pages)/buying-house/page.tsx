@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import { PageHeader } from "@/components/layout/page-header";
 import { ServicesGrid } from "@/components/sections/services-grid";
-import { ProcessFlow } from "@/components/sections/process-flow";
 import { CTASection } from "@/components/sections/cta-section";
 import { SectionWrapper } from "@/components/common/section-wrapper";
 import { ProductCard } from "@/components/cards/product-card";
@@ -103,11 +102,6 @@ export default function BuyingHousePage() {
 
       {/* Process Section */}
       <div className="bg-slate-50">
-        <ProcessFlow
-          title="How we work"
-          subtitle="Process"
-          steps={HOW_WE_WORK}
-        />
       </div>
 
       {/* CTA Section */}

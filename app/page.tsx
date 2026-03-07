@@ -40,6 +40,8 @@ export default function Home() {
         columns={4}
       />
 
+      <HowWeWork/>
+
       {/* Professional Buying House Services */}
       <ImageTextSection
         title="Professional buying house services"
@@ -77,8 +79,6 @@ export default function Home() {
       {/* Product Showcase Section */}
       <ProductShowcase categories={PRODUCT_CATEGORIES} />
       
-      <HowWeWork/>
-
       {/* CTA Section */}
       <CTASection
         title="Ready to start sourcing?"
