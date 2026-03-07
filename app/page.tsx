@@ -14,6 +14,7 @@ import {
   CONTACT_INFO,
   PRODUCT_CATEGORIES,
 } from "@/lib/constants";
+import HowWeWork from "@/components/sections/HowWeWork";
 
 export const metadata: Metadata = {
   title: "Alliance Sourcing BD | Professional Buying & Sourcing Services",
@@ -76,13 +77,8 @@ export default function Home() {
 
       {/* Product Showcase Section */}
       <ProductShowcase categories={PRODUCT_CATEGORIES} />
-
-      {/* How We Work Section */}
-      <ProcessFlow
-        title="How we work"
-        subtitle="Process"
-        steps={HOW_WE_WORK}
-      />
+      
+      <HowWeWork/>
 
       {/* CTA Section */}
       <CTASection
