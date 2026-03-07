@@ -22,10 +22,9 @@ export function ImageTextSection({
   imageAlt,
   imagePosition = 'left',
   features,
-  backgroundColor = 'bg-white',
 }: ImageTextSectionProps) {
   return (
-    <SectionWrapper className={`py-16 md:py-24 ${backgroundColor}`}>
+    <SectionWrapper className={`py-16 md:py-24`}>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center">
         {/* Image */}
         <div

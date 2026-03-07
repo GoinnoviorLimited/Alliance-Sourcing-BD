@@ -21,7 +21,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: `${SITE_NAME} | Professional Buying & Sourcing Services`,
   description: SITE_DESCRIPTION,
-  generator: 'v0.app',
+  generator: '360dsoul.com',
   icons: {
     icon: [
       {

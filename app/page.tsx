@@ -40,34 +40,35 @@ export default function Home() {
         columns={4}
       />
 
-      <HowWeWork/>
+      <HowWeWork />
+      <div className="bg-gradient-to-b from-blue-50 to-white">
+        {/* Professional Buying House Services */}
+        <ImageTextSection
+          title="Professional buying house services"
+          description="Founded with a vision to revolutionize the apparel industry, Alliance Sourcing BD has grown into the leading global leader in garment sourcing. With decades of collective expertise, we bridge the gap between world-class brands and high-quality manufacturing units in Bangladesh and beyond. Our journey is defined by a relentless pursuit of excellence, ethical practices, and a deep understanding of the fast-evolving fashion landscape."
+          image="/garment-rack.jpg"
+          imageAlt="Professional buying services"
+          imagePosition="left"
+          features={[
+            {
+              icon: <CheckCircle2 className="w-6 h-6" />,
+              title: "Expert evaluation",
+              description: "Thorough assessment of manufacturer capabilities"
+            },
+            {
+              icon: <CheckCircle2 className="w-6 h-6" />,
+              title: "Quality compliance",
+              description: "Rigorous inspection and certification"
+            },
+            {
+              icon: <CheckCircle2 className="w-6 h-6" />,
+              title: "Cost optimization",
+              description: "Best pricing without compromising quality"
+            }
+          ]}
+        />
+      </div>
 
-      {/* Professional Buying House Services */}
-      <ImageTextSection
-        title="Professional buying house services"
-        description="Founded with a vision to revolutionize the apparel industry, Alliance Sourcing BD has grown into the leading global leader in garment sourcing. With decades of collective expertise, we bridge the gap between world-class brands and high-quality manufacturing units in Bangladesh and beyond. Our journey is defined by a relentless pursuit of excellence, ethical practices, and a deep understanding of the fast-evolving fashion landscape."
-        image="/garment-rack.jpg"
-        imageAlt="Professional buying services"
-        imagePosition="left"
-        backgroundColor="bg-gradient-to-b from-blue-50 to-white"
-        features={[
-          {
-            icon: <CheckCircle2 className="w-6 h-6" />,
-            title: "Expert evaluation",
-            description: "Thorough assessment of manufacturer capabilities"
-          },
-          {
-            icon: <CheckCircle2 className="w-6 h-6" />,
-            title: "Quality compliance",
-            description: "Rigorous inspection and certification"
-          },
-          {
-            icon: <CheckCircle2 className="w-6 h-6" />,
-            title: "Cost optimization",
-            description: "Best pricing without compromising quality"
-          }
-        ]}
-      />
 
       {/* Buying House Services Section */}
       <ServicesGrid
@@ -78,7 +79,7 @@ export default function Home() {
 
       {/* Product Showcase Section */}
       <ProductShowcase categories={PRODUCT_CATEGORIES} />
-      
+
       {/* CTA Section */}
       <CTASection
         title="Ready to start sourcing?"
