@@ -58,33 +58,30 @@ export function BannerCarousel() {
 
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % bannerSlides.length);
-    }, 5000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, [isAutoPlay]);
 
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
-    setIsAutoPlay(false);
   };
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % bannerSlides.length);
-    setIsAutoPlay(false);
   };
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + bannerSlides.length) % bannerSlides.length);
-    setIsAutoPlay(false);
   };
 
   const slide = bannerSlides[currentSlide];
 
   return (
     <div 
-      className="relative w-full h-[500px] md:h-[600px] overflow-hidden group"
-      onMouseEnter={() => setIsAutoPlay(false)}
-      onMouseLeave={() => setIsAutoPlay(true)}
+      className="relative w-full h-125 md:h-150 xl:h-[calc(100vh-60px)] overflow-hidden group"
+      // onMouseEnter={() => setIsAutoPlay(false)}
+      // onMouseLeave={() => setIsAutoPlay(true)}
     >
       {/* Slides */}
       {bannerSlides.map((item, index) => (

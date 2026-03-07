@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import { PageHeader } from "@/components/layout/page-header";
-import { ProcessFlow } from "@/components/sections/process-flow";
 import { FeaturesGrid } from "@/components/sections/features-grid";
 import { CTASection } from "@/components/sections/cta-section";
 import { SectionWrapper } from "@/components/common/section-wrapper";
@@ -81,7 +80,7 @@ export default function AboutPage() {
       </div>
 
       {/* Process Section */}
-      <ProcessFlow title="How we work" steps={HOW_WE_WORK} />
+      
 
       {/* CTA */}
       <CTASection
