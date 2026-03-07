@@ -14,6 +14,7 @@ import {
   PRODUCT_CATEGORIES,
 } from "@/lib/constants";
 import HowWeWork from "@/components/sections/HowWeWork";
+import ProductsAndServices from "@/components/sections/ProductsAndServices";
 
 export const metadata: Metadata = {
   title: "Alliance Sourcing BD | Professional Buying & Sourcing Services",
@@ -76,6 +77,8 @@ export default function Home() {
         subtitle="We manage every step of your sourcing journey with precision"
         services={SERVICES}
       />
+
+      <ProductsAndServices />
 
       {/* Product Showcase Section */}
       <ProductShowcase categories={PRODUCT_CATEGORIES} />
