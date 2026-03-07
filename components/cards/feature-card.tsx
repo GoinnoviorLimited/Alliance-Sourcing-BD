@@ -1,15 +1,15 @@
 interface FeatureCardProps {
   title: string;
   description: string;
-  icon?: string | React.ReactNode;
+  icons?: string | React.ReactNode;
 }
 
-export function FeatureCard({ title, description, icon }: FeatureCardProps) {
+export function FeatureCard({ title, description, icons }: FeatureCardProps) {
   return (
-    <div className="flex flex-col items-center text-center p-8 rounded-lg bg-white hover:shadow-lg transition-shadow duration-300">
-      {icon && (
-        <div className="mb-6 flex justify-center">
-          <div className="text-5xl text-cyan-500">{icon}</div>
+    <div className="flex flex-col p-5 rounded-lg bg-white hover:bg-gray-100 transition-shadow duration-300 border border-gray-200">
+      {icons && (
+        <div className="mb-10">
+          <div className="text-3xl text-cyan-500">{icons}</div>
         </div>
       )}
       <h3 className="text-xl font-semibold text-slate-900 mb-3" style={{ fontFamily: 'var(--font-syne)' }}>

@@ -4,7 +4,6 @@ import { FeaturesGrid } from "@/components/sections/features-grid";
 import { ServicesGrid } from "@/components/sections/services-grid";
 import { ImageTextSection } from "@/components/sections/image-text-section";
 import { ProductShowcase } from "@/components/sections/product-showcase";
-import { ProcessFlow } from "@/components/sections/process-flow";
 import { CTASection } from "@/components/sections/cta-section";
 import { CheckCircle2 } from "lucide-react";
 import {

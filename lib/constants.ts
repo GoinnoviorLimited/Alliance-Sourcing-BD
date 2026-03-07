@@ -1,3 +1,5 @@
+import { icons } from "lucide-react";
+
 export const SITE_NAME = "Alliance Sourcing BD";
 export const SITE_DESCRIPTION =
   "Professional buying & sourcing services for apparel, garments, and industrial manufacturing";
@@ -177,18 +179,22 @@ export const TEAM_MEMBERS = [
 
 export const VALUES = [
   {
+    icons: "💎",
     title: "Quality Assurance",
     description: "Rigorous testing at every production stage",
   },
   {
+    icons: "🤝",
     title: "Ethical Sourcing",
     description: "Fair wages and safe working conditions",
   },
   {
+    icons: "⏰",
     title: "On-time Delivery",
     description: "Your deadlines are our commitments",
   },
   {
+    icons: "🌐",
     title: "Global Network",
     description: "Connected across Bangladesh and beyond",
   },
