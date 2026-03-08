@@ -3,18 +3,16 @@ import { BannerCarousel } from "@/components/sections/banner-carousel";
 import { FeaturesGrid } from "@/components/sections/features-grid";
 import { ServicesGrid } from "@/components/sections/services-grid";
 import { ImageTextSection } from "@/components/sections/image-text-section";
-import { ProductShowcase } from "@/components/sections/product-showcase";
 import { CTASection } from "@/components/sections/cta-section";
 import { CheckCircle2 } from "lucide-react";
 import {
   SERVICES,
   VALUES,
-  HOW_WE_WORK,
   CONTACT_INFO,
-  PRODUCT_CATEGORIES,
 } from "@/lib/constants";
 import HowWeWork from "@/components/sections/HowWeWork";
 import ProductsAndServices from "@/components/sections/ProductsAndServices";
+import FactoryAndMachinery from "@/components/sections/FactoryAndMachinery";
 
 export const metadata: Metadata = {
   title: "Alliance Sourcing BD | Professional Buying & Sourcing Services",
@@ -77,6 +75,8 @@ export default function Home() {
         subtitle="We manage every step of your sourcing journey with precision"
         services={SERVICES}
       />
+      
+      <FactoryAndMachinery />
 
       <ProductsAndServices />
 
