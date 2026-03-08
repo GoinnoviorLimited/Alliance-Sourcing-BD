@@ -15,18 +15,6 @@ const machineGalleryData = {
       image: "https://i.postimg.cc/904WZ0jr/THREAD-SUCKING-MACHINE.png",
       alt: "Thread Sucking Machine",
     },
-    // {
-    //   id: 3,
-    //   label: "Cutting Machine",
-    //   image: "https://images.unsplash.com/photo-1566228015668-4c45dbc4e2f5?w=800&q=80",
-    //   alt: "Cutting Machine",
-    // },
-    // {
-    //   id: 4,
-    //   label: "Fusing Machine",
-    //   image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80",
-    //   alt: "Fusing Machine",
-    // },
   ],
 };
 
