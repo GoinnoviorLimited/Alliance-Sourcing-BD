@@ -23,7 +23,7 @@ export default function FactoryMachineryPage() {
       <PageHeader
         title="Our Manufacturing Excellence"
         subtitle="State-of-the-art facilities meeting the highest global ethical and quality standards through innovation and precision"
-        backgroundImage="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/01354e3d797db6485a78760f4b0ddcbf51eaa4ad-629hMlVHw0rkTHnUUXOW1MXT2M5XU1.png"
+        backgroundImage="https://i.postimg.cc/ZR5YYj7X/Header.jpg"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Factory & Machinery" },
@@ -66,7 +66,7 @@ export default function FactoryMachineryPage() {
           {/* Image */}
           <div>
             <img
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/01354e3d797db6485a78760f4b0ddcbf51eaa4ad-629hMlVHw0rkTHnUUXOW1MXT2M5XU1.png"
+              src="https://i.postimg.cc/904WZ0jr/THREAD-SUCKING-MACHINE.png"
               alt="Our factory"
               className="rounded-lg shadow-lg w-full"
             />
