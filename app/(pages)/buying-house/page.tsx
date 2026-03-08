@@ -3,8 +3,9 @@ import { PageHeader } from "@/components/layout/page-header";
 import { ServicesGrid } from "@/components/sections/services-grid";
 import { CTASection } from "@/components/sections/cta-section";
 import { SectionWrapper } from "@/components/common/section-wrapper";
-import { ProductCard } from "@/components/cards/product-card";
-import { SERVICES, HOW_WE_WORK, EXPERTISE_CATEGORIES, CONTACT_INFO } from "@/lib/constants";
+import { SERVICES, CONTACT_INFO, PRODUCT_CATEGORIES } from "@/lib/constants";
+import { ProductShowcase } from "@/components/sections/product-showcase";
+import HowWeWork from "@/components/sections/HowWeWork";
 
 export const metadata: Metadata = {
   title: "Buying House Services | Alliance Sourcing BD",
@@ -39,70 +40,9 @@ export default function BuyingHousePage() {
       />
 
       {/* Product Expertise Section */}
-      <SectionWrapper className="py-12 md:py-16">
-        <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-2 text-center">
-          Product Expertise
-        </h2>
-        <p className="text-lg text-slate-600 max-w-2xl mx-auto text-center mb-12">
-          We specialize in a wide array of textile categories, ensuring the right technical
-          expertise for every product type
-        </p>
+      <ProductShowcase categories={PRODUCT_CATEGORIES} />
 
-        {/* Knitwear */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-2">
-            <span className="text-3xl">👕</span>
-            {EXPERTISE_CATEGORIES.knit.title}
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {EXPERTISE_CATEGORIES.knit.items.map((item) => (
-              <ProductCard
-                key={item.name}
-                name={item.name}
-                description={item.description}
-              />
-            ))}
-          </div>
-        </div>
-
-        {/* Woven */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-2">
-            <span className="text-3xl">👔</span>
-            {EXPERTISE_CATEGORIES.woven.title}
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {EXPERTISE_CATEGORIES.woven.items.map((item) => (
-              <ProductCard
-                key={item.name}
-                name={item.name}
-                description={item.description}
-              />
-            ))}
-          </div>
-        </div>
-
-        {/* Denim */}
-        <div>
-          <h3 className="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-2">
-            <span className="text-3xl">👖</span>
-            {EXPERTISE_CATEGORIES.denim.title}
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {EXPERTISE_CATEGORIES.denim.items.map((item) => (
-              <ProductCard
-                key={item.name}
-                name={item.name}
-                description={item.description}
-              />
-            ))}
-          </div>
-        </div>
-      </SectionWrapper>
-
-      {/* Process Section */}
-      <div className="bg-slate-50">
-      </div>
+      <HowWeWork />
 
       {/* CTA Section */}
       <CTASection

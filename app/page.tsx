@@ -81,7 +81,7 @@ export default function Home() {
       <ProductsAndServices />
 
       {/* Product Showcase Section */}
-      <ProductShowcase categories={PRODUCT_CATEGORIES} />
+      {/* <ProductShowcase categories={PRODUCT_CATEGORIES} /> */}
 
       {/* CTA Section */}
       <CTASection
