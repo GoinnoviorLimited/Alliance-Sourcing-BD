@@ -4,6 +4,8 @@ import { SectionWrapper } from "@/components/common/section-wrapper";
 import { CTASection } from "@/components/sections/cta-section";
 import { MachineryCard } from "@/components/cards/machinery-card";
 import { MACHINERY, CONTACT_INFO } from "@/lib/constants";
+import MachineryInventory from "./Machenary";
+import MachineGallery from "./MachenaryGallary";
 
 export const metadata: Metadata = {
   title: "Factory & Machinery | Alliance Sourcing BD",
@@ -83,67 +85,10 @@ export default function FactoryMachineryPage() {
           We invest in the latest industry 4.0 technology to reduce waste and maximize efficiency
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {MACHINERY.map((machine) => (
-            <MachineryCard key={machine.id} {...machine} />
-          ))}
-        </div>
+        <MachineGallery/>
+
+        <MachineryInventory />
       </SectionWrapper>
-
-      {/* Production Systems Section */}
-      <div className="bg-slate-50">
-        <SectionWrapper className="py-12 md:py-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-2 text-center">
-            Production Systems
-          </h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto text-center mb-12">
-            Our integrated systems ensure efficiency and quality at every stage
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="flex gap-4">
-              <div className="text-3xl">🖥️</div>
-              <div>
-                <h3 className="font-semibold text-slate-900 mb-2">CAD/CAM Cutting</h3>
-                <p className="text-slate-600 text-sm">
-                  Precision digital pattern cutting with minimal waste through automated systems
-                </p>
-              </div>
-            </div>
-
-            <div className="flex gap-4">
-              <div className="text-3xl">⚙️</div>
-              <div>
-                <h3 className="font-semibold text-slate-900 mb-2">Automatic Sewing</h3>
-                <p className="text-slate-600 text-sm">
-                  High-speed, consistent stitching with multiple specialized machines for different
-                  seams
-                </p>
-              </div>
-            </div>
-
-            <div className="flex gap-4">
-              <div className="text-3xl">🎨</div>
-              <div>
-                <h3 className="font-semibold text-slate-900 mb-2">Embroidery</h3>
-                <p className="text-slate-600 text-sm">
-                  Multi-head embroidery systems for detailed branding and custom designs
-                </p>
-              </div>
-            </div>
-
-            <div className="flex gap-4">
-              <div className="text-3xl">💨</div>
-              <div>
-                <h3 className="font-semibold text-slate-900 mb-2">Vapor Finishing</h3>
-                <p className="text-slate-600 text-sm">
-                  Environment-friendly finishing systems that provide superior results
-                </p>
-              </div>
-            </div>
-          </div>
-        </SectionWrapper>
-      </div>
 
       {/* CTA Section */}
       <CTASection
