@@ -2,39 +2,38 @@
 
 /* ───────────────── DATA (Flat Structure) ───────────────── */
 const machines = [
-  { sl: "01", category: "Cutting Machinery", name: "Cutting Machine 10\"", brand: "KM", quantity: 3 },
-  { sl: "02", category: "Cutting Machinery", name: "Cutting Machine 8\"", brand: "KM", quantity: 3 },
-  { sl: "03", category: "Cutting Machinery", name: "Cutting Machine 8\"", brand: "Open", quantity: 1 },
-  { sl: "04", category: "Cutting Machinery", name: "Band Knife Machine", brand: "Open", quantity: 1 },
-  { sl: "05", category: "Cutting Machinery", name: "End Cutting Machine", brand: "Eastman", quantity: 2 },
-  { sl: "06", category: "Cutting Machinery", name: "Fabric Inspection Machine", brand: "Open", quantity: 1 },
-  { sl: "07", category: "Cutting Machinery", name: "Fusing Machine (Medium) HP-650", brand: "Open", quantity: 2 },
-  { sl: "08", category: "Cutting Machinery", name: "Drill Machine", brand: "Open", quantity: 2 },
-  { sl: "09", category: "Cutting Machinery", name: "Numbering Machine", brand: "Open", quantity: 5 },
+  { category: "Cutting Machinery", name: "Cutting Machine 10\"", brand: "KM", quantity: 3 },
+  { category: "Cutting Machinery", name: "Cutting Machine 8\"", brand: "KM", quantity: 3 },
+  { category: "Cutting Machinery", name: "Cutting Machine 8\"", brand: "Open", quantity: 1 },
+  { category: "Cutting Machinery", name: "Band Knife Machine", brand: "Open", quantity: 1 },
+  { category: "Cutting Machinery", name: "End Cutting Machine", brand: "Eastman", quantity: 2 },
+  { category: "Cutting Machinery", name: "Fabric Inspection Machine", brand: "Open", quantity: 1 },
+  { category: "Cutting Machinery", name: "Fusing Machine (Medium) HP-650", brand: "Open", quantity: 2 },
+  { category: "Cutting Machinery", name: "Drill Machine", brand: "Open", quantity: 2 },
+  { category: "Cutting Machinery", name: "Numbering Machine", brand: "Open", quantity: 5 },
 
-  { sl: "01", category: "Sewing Machinery", name: "Plain Machine", brand: "Juki", quantity: 120 },
-  { sl: "02", category: "Sewing Machinery", name: "Overlock Machine", brand: "Pegasus", quantity: 45 },
-  { sl: "03", category: "Sewing Machinery", name: "Flat Lock Machine", brand: "Pegasus", quantity: 20 },
-  { sl: "04", category: "Sewing Machinery", name: "Feed of the Arm", brand: "Juki", quantity: 8 },
-  { sl: "05", category: "Sewing Machinery", name: "Button Hole Machine", brand: "Juki", quantity: 6 },
-  { sl: "06", category: "Sewing Machinery", name: "Button Stitch Machine", brand: "Juki", quantity: 6 },
-  { sl: "07", category: "Sewing Machinery", name: "Bar Tack Machine", brand: "Juki", quantity: 4 },
-  { sl: "08", category: "Sewing Machinery", name: "Kansai Machine", brand: "Kansai", quantity: 4 },
+  { category: "Sewing Machinery", name: "Plain Machine", brand: "Juki", quantity: 120 },
+  { category: "Sewing Machinery", name: "Overlock Machine", brand: "Pegasus", quantity: 45 },
+  { category: "Sewing Machinery", name: "Flat Lock Machine", brand: "Pegasus", quantity: 20 },
+  { category: "Sewing Machinery", name: "Feed of the Arm", brand: "Juki", quantity: 8 },
+  { category: "Sewing Machinery", name: "Button Hole Machine", brand: "Juki", quantity: 6 },
+  { category: "Sewing Machinery", name: "Button Stitch Machine", brand: "Juki", quantity: 6 },
+  { category: "Sewing Machinery", name: "Bar Tack Machine", brand: "Juki", quantity: 4 },
+  { category: "Sewing Machinery", name: "Kansai Machine", brand: "Kansai", quantity: 4 },
 
-  { sl: "01", category: "Finishing Machinery", name: "Steam Iron", brand: "Tefal", quantity: 30 },
-  { sl: "02", category: "Finishing Machinery", name: "Vacuum Iron Table", brand: "Open", quantity: 15 },
-  { sl: "03", category: "Finishing Machinery", name: "Boiler", brand: "Open", quantity: 2 },
-  { sl: "04", category: "Finishing Machinery", name: "Pressing Machine", brand: "Open", quantity: 4 },
-  { sl: "05", category: "Finishing Machinery", name: "Hanger Clipping Machine", brand: "Open", quantity: 3 },
+  { category: "Finishing Machinery", name: "Steam Iron", brand: "Tefal", quantity: 30 },
+  { category: "Finishing Machinery", name: "Vacuum Iron Table", brand: "Open", quantity: 15 },
+  { category: "Finishing Machinery", name: "Boiler", brand: "Open", quantity: 2 },
+  { category: "Finishing Machinery", name: "Pressing Machine", brand: "Open", quantity: 4 },
+  { category: "Finishing Machinery", name: "Hanger Clipping Machine", brand: "Open", quantity: 3 },
 
-  { sl: "01", category: "Embroidery Machinery", name: "Embroidery Machine (15 Head)", brand: "Tajima", quantity: 2 },
-  { sl: "02", category: "Embroidery Machinery", name: "Embroidery Machine (6 Head)", brand: "Tajima", quantity: 1 },
-  { sl: "03", category: "Embroidery Machinery", name: "Embroidery Machine (2 Head)", brand: "Open", quantity: 3 }
+  { category: "Embroidery Machinery", name: "Embroidery Machine (15 Head)", brand: "Tajima", quantity: 2 },
+  { category: "Embroidery Machinery", name: "Embroidery Machine (6 Head)", brand: "Tajima", quantity: 1 },
+  { category: "Embroidery Machinery", name: "Embroidery Machine (2 Head)", brand: "Open", quantity: 3 }
 ]
 
 /* ───────────────── TYPES ───────────────── */
 interface Machine {
-  sl: string
   category: string
   name: string
   brand: string
@@ -92,7 +91,7 @@ const CategoryTable = ({ category }: { category: Category }) => {
             <tbody className="divide-y divide-gray-100">
               {category.machines.map((machine, i) => (
                 <tr key={i} className="hover:bg-gray-50 transition">
-                  <td className="py-3.5 px-6 text-gray-500 tabular-nums">{machine.sl}</td>
+                  <td className="py-3.5 px-6 text-gray-500 tabular-nums">{i+1}</td>
                   <td className="py-3.5 px-6 text-gray-800">{machine.name}</td>
                   <td className="py-3.5 px-6 text-gray-600">{machine.brand}</td>
                   <td className="py-3.5 px-6 text-right text-gray-800 tabular-nums">
