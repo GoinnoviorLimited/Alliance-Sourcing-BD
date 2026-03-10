@@ -1,94 +1,85 @@
 'use client'
 
-// ── JSON DATA ──────────────────────────────────────────────
-const machineryData = {
-  heading: "Our Machinery Inventory",
-  categories: [
-    {
-      id: 1,
-      name: "Cutting Machinery",
-      machines: [
-        { sl: "01", name: "Cutting Machine 10\"", brand: "KM", quantity: 3 },
-        { sl: "02", name: "Cutting Machine 8\"", brand: "KM", quantity: 3 },
-        { sl: "03", name: "Cutting Machine 8\"", brand: "Open", quantity: 1 },
-        { sl: "04", name: "Band Knife Machine", brand: "Open", quantity: 1 },
-        { sl: "05", name: "End Cutting Machine", brand: "Eastman", quantity: 2 },
-        { sl: "06", name: "Fabric Inspection Machine", brand: "Open", quantity: 1 },
-        { sl: "07", name: "Fusing Machine (Medium) HP-650", brand: "Open", quantity: 2 },
-        { sl: "08", name: "Drill Machine", brand: "Open", quantity: 2 },
-        { sl: "09", name: "Numbering Machine", brand: "Open", quantity: 5 },
-      ],
-    },
-    {
-      id: 2,
-      name: "Sewing Machinery",
-      machines: [
-        { sl: "01", name: "Plain Machine", brand: "Juki", quantity: 120 },
-        { sl: "02", name: "Overlock Machine", brand: "Pegasus", quantity: 45 },
-        { sl: "03", name: "Flat Lock Machine", brand: "Pegasus", quantity: 20 },
-        { sl: "04", name: "Feed of the Arm", brand: "Juki", quantity: 8 },
-        { sl: "05", name: "Button Hole Machine", brand: "Juki", quantity: 6 },
-        { sl: "06", name: "Button Stitch Machine", brand: "Juki", quantity: 6 },
-        { sl: "07", name: "Bar Tack Machine", brand: "Juki", quantity: 4 },
-        { sl: "08", name: "Kansai Machine", brand: "Kansai", quantity: 4 },
-      ],
-    },
-    {
-      id: 3,
-      name: "Finishing Machinery",
-      machines: [
-        { sl: "01", name: "Steam Iron", brand: "Tefal", quantity: 30 },
-        { sl: "02", name: "Vacuum Iron Table", brand: "Open", quantity: 15 },
-        { sl: "03", name: "Boiler", brand: "Open", quantity: 2 },
-        { sl: "04", name: "Pressing Machine", brand: "Open", quantity: 4 },
-        { sl: "05", name: "Hanger Clipping Machine", brand: "Open", quantity: 3 },
-      ],
-    },
-    {
-      id: 4,
-      name: "Embroidery Machinery",
-      machines: [
-        { sl: "01", name: "Embroidery Machine (15 Head)", brand: "Tajima", quantity: 2 },
-        { sl: "02", name: "Embroidery Machine (6 Head)", brand: "Tajima", quantity: 1 },
-        { sl: "03", name: "Embroidery Machine (2 Head)", brand: "Open", quantity: 3 },
-      ],
-    },
-  ],
-};
+/* ───────────────── DATA (Flat Structure) ───────────────── */
+const machines = [
+  { sl: "01", category: "Cutting Machinery", name: "Cutting Machine 10\"", brand: "KM", quantity: 3 },
+  { sl: "02", category: "Cutting Machinery", name: "Cutting Machine 8\"", brand: "KM", quantity: 3 },
+  { sl: "03", category: "Cutting Machinery", name: "Cutting Machine 8\"", brand: "Open", quantity: 1 },
+  { sl: "04", category: "Cutting Machinery", name: "Band Knife Machine", brand: "Open", quantity: 1 },
+  { sl: "05", category: "Cutting Machinery", name: "End Cutting Machine", brand: "Eastman", quantity: 2 },
+  { sl: "06", category: "Cutting Machinery", name: "Fabric Inspection Machine", brand: "Open", quantity: 1 },
+  { sl: "07", category: "Cutting Machinery", name: "Fusing Machine (Medium) HP-650", brand: "Open", quantity: 2 },
+  { sl: "08", category: "Cutting Machinery", name: "Drill Machine", brand: "Open", quantity: 2 },
+  { sl: "09", category: "Cutting Machinery", name: "Numbering Machine", brand: "Open", quantity: 5 },
 
-// ── TYPES ──────────────────────────────────────────────────
+  { sl: "01", category: "Sewing Machinery", name: "Plain Machine", brand: "Juki", quantity: 120 },
+  { sl: "02", category: "Sewing Machinery", name: "Overlock Machine", brand: "Pegasus", quantity: 45 },
+  { sl: "03", category: "Sewing Machinery", name: "Flat Lock Machine", brand: "Pegasus", quantity: 20 },
+  { sl: "04", category: "Sewing Machinery", name: "Feed of the Arm", brand: "Juki", quantity: 8 },
+  { sl: "05", category: "Sewing Machinery", name: "Button Hole Machine", brand: "Juki", quantity: 6 },
+  { sl: "06", category: "Sewing Machinery", name: "Button Stitch Machine", brand: "Juki", quantity: 6 },
+  { sl: "07", category: "Sewing Machinery", name: "Bar Tack Machine", brand: "Juki", quantity: 4 },
+  { sl: "08", category: "Sewing Machinery", name: "Kansai Machine", brand: "Kansai", quantity: 4 },
+
+  { sl: "01", category: "Finishing Machinery", name: "Steam Iron", brand: "Tefal", quantity: 30 },
+  { sl: "02", category: "Finishing Machinery", name: "Vacuum Iron Table", brand: "Open", quantity: 15 },
+  { sl: "03", category: "Finishing Machinery", name: "Boiler", brand: "Open", quantity: 2 },
+  { sl: "04", category: "Finishing Machinery", name: "Pressing Machine", brand: "Open", quantity: 4 },
+  { sl: "05", category: "Finishing Machinery", name: "Hanger Clipping Machine", brand: "Open", quantity: 3 },
+
+  { sl: "01", category: "Embroidery Machinery", name: "Embroidery Machine (15 Head)", brand: "Tajima", quantity: 2 },
+  { sl: "02", category: "Embroidery Machinery", name: "Embroidery Machine (6 Head)", brand: "Tajima", quantity: 1 },
+  { sl: "03", category: "Embroidery Machinery", name: "Embroidery Machine (2 Head)", brand: "Open", quantity: 3 }
+]
+
+/* ───────────────── TYPES ───────────────── */
 interface Machine {
-  sl: string;
-  name: string;
-  brand: string;
-  quantity: number;
+  sl: string
+  category: string
+  name: string
+  brand: string
+  quantity: number
 }
 
 interface Category {
-  id: number;
-  name: string;
-  machines: Machine[];
+  id: number
+  name: string
+  machines: Machine[]
 }
 
-// ── HELPERS ────────────────────────────────────────────────
-const padQty = (n: number) => String(n).padStart(2, "0");
+/* ───────────────── HELPERS ───────────────── */
+const padQty = (n: number) => String(n).padStart(2, "0")
 
-// ── CATEGORY TABLE ─────────────────────────────────────────
+const groupMachines = (machines: Machine[]): Category[] => {
+  const map: Record<string, Machine[]> = {}
+
+  machines.forEach((machine) => {
+    if (!map[machine.category]) map[machine.category] = []
+    map[machine.category].push(machine)
+  })
+
+  return Object.entries(map).map(([name, machines], index) => ({
+    id: index + 1,
+    name,
+    machines
+  }))
+}
+
+/* ───────────────── CATEGORY TABLE ───────────────── */
 const CategoryTable = ({ category }: { category: Category }) => {
-  const total = category.machines.reduce((sum, m) => sum + m.quantity, 0);
+  const total = category.machines.reduce((sum, m) => sum + m.quantity, 0)
 
   return (
     <div className="mb-14 last:mb-0">
-      {/* Category heading */}
+
       <h3 className="text-center text-lg font-medium text-gray-700 mb-5 tracking-wide">
         {category.name}
       </h3>
 
-      {/* Table wrapper */}
       <div className="border border-gray-200 rounded-xl overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
-            {/* Header */}
+
             <thead>
               <tr className="bg-gray-50 border-b border-gray-200">
                 <th className="py-3.5 px-6 text-left font-semibold text-gray-700 w-24">SL No.</th>
@@ -98,69 +89,72 @@ const CategoryTable = ({ category }: { category: Category }) => {
               </tr>
             </thead>
 
-            {/* Body */}
             <tbody className="divide-y divide-gray-100">
-              {category.machines.map((machine) => (
-                <tr key={machine.sl} className="hover:bg-gray-50/60 transition-colors duration-100">
+              {category.machines.map((machine, i) => (
+                <tr key={i} className="hover:bg-gray-50 transition">
                   <td className="py-3.5 px-6 text-gray-500 tabular-nums">{machine.sl}</td>
                   <td className="py-3.5 px-6 text-gray-800">{machine.name}</td>
                   <td className="py-3.5 px-6 text-gray-600">{machine.brand}</td>
-                  <td className="py-3.5 px-6 text-right text-gray-800 tabular-nums">{padQty(machine.quantity)}</td>
+                  <td className="py-3.5 px-6 text-right text-gray-800 tabular-nums">
+                    {padQty(machine.quantity)}
+                  </td>
                 </tr>
               ))}
             </tbody>
 
-            {/* Footer — total */}
             <tfoot>
-              <tr className="border-t border-gray-200 bg-gray-50/80">
-                <td colSpan={2} className="py-3.5 px-6" />
-                <td className="py-3.5 px-6 text-right font-semibold text-gray-800 pr-8">
+              <tr className="border-t border-gray-200 bg-gray-50">
+                <td colSpan={2}></td>
+                <td className="py-3.5 px-6 text-right font-semibold text-gray-800">
                   Total {category.name}
                 </td>
-                <td className="py-3.5 px-6 text-right font-bold text-gray-900 tabular-nums">
+                <td className="py-3.5 px-6 text-right font-bold text-gray-900">
                   {total}
                 </td>
               </tr>
             </tfoot>
+
           </table>
         </div>
       </div>
+
     </div>
-  );
-};
+  )
+}
 
-// ── MAIN COMPONENT ─────────────────────────────────────────
+/* ───────────────── MAIN COMPONENT ───────────────── */
 export default function MachineryInventory() {
-  const { heading, categories } = machineryData;
 
-  const grandTotal = categories.reduce(
-    (sum, cat) => sum + cat.machines.reduce((s, m) => s + m.quantity, 0),
-    0
-  );
+  const categories = groupMachines(machines)
+
+  const grandTotal = machines.reduce((sum, m) => sum + m.quantity, 0)
 
   return (
     <section className="w-full bg-white">
+
       <div className="max-w-7xl mx-auto px-5 sm:px-8 py-14 sm:py-20">
 
-        {/* Page heading */}
-        <h1 className="text-4xl sm:text-5xl font-normal text-gray-900 text-center tracking-tight mb-14">
-          {heading}
+        <h1 className="text-4xl sm:text-5xl font-normal text-gray-900 text-center mb-14">
+          Our Machinery Inventory
         </h1>
 
-        {/* Category tables */}
         {categories.map((cat) => (
           <CategoryTable key={cat.id} category={cat} />
         ))}
 
-        {/* Grand total */}
         <div className="mt-10 flex justify-end">
           <div className="flex items-center gap-6 border border-gray-200 rounded-xl px-8 py-4 bg-gray-50">
-            <span className="text-sm font-semibold text-gray-700">Grand Total Machines</span>
-            <span className="text-2xl font-bold text-gray-900 tabular-nums">{grandTotal}</span>
+            <span className="text-sm font-semibold text-gray-700">
+              Grand Total Machines
+            </span>
+            <span className="text-2xl font-bold text-gray-900">
+              {grandTotal}
+            </span>
           </div>
         </div>
 
       </div>
+
     </section>
-  );
+  )
 }
