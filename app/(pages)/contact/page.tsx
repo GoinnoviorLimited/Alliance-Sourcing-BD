@@ -5,6 +5,7 @@ import { CTASection } from "@/components/sections/cta-section";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { CONTACT_INFO } from "@/lib/constants";
+import ContactForm from "@/components/sections/contact-form";
 
 export const metadata: Metadata = {
   title: "Contact Us | Alliance Sourcing BD",
@@ -86,42 +87,23 @@ export default function ContactPage() {
             </a>
           </div>
         </div>
-
-        {/* Contact Form or Message */}
-        <div className="max-w-2xl mx-auto bg-slate-50 rounded-lg p-8 text-center">
-          <h2 className="text-2xl font-bold text-slate-900 mb-4">
-            Let's discuss your sourcing needs
-          </h2>
-          <p className="text-slate-600 mb-6">
-            Fill out the form or reach out directly through the contact information above. We're
-            ready to help you find the perfect manufacturing partners for your apparel needs.
-          </p>
-
-          <a href={`mailto:${CONTACT_INFO.email}`}>
-            <Button className="bg-cyan-600 hover:bg-cyan-700 text-white px-8 py-3 h-auto text-base">
-              Send us an Email
-            </Button>
-          </a>
-        </div>
       </SectionWrapper>
 
-      {/* Map Section */}
-      <SectionWrapper className="py-12 md:py-16">
-        <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-          Our Location
-        </h2>
-        <div className="w-full h-96 rounded-lg overflow-hidden shadow-lg">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3649.3838424678644!2d90.15753242346826!3d23.819089917635826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c2e32f3c4a2b%3A0x1234567890abcdef!2sAsha%20Plaza%2C%20Dhaka%2C%20Bangladesh!5e0!3m2!1sen!2sbd!4v1234567890"
-            width="100%"
-            height="100%"
-            style={{ border: 0 }}
-            allowFullScreen={true}
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
-      </SectionWrapper>
+
+      <div className="container mx-auto px-5 lg:px-0 grid grid-cols-1 md:grid-cols-2 gap-5 pb-10 lg:pb-20">
+        <ContactForm />
+
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3649.3838424678644!2d90.15753242346826!3d23.819089917635826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c2e32f3c4a2b%3A0x1234567890abcdef!2sAsha%20Plaza%2C%20Dhaka%2C%20Bangladesh!5e0!3m2!1sen!2sbd!4v1234567890"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          allowFullScreen={true}
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+
 
       {/* CTA Section */}
       <CTASection
