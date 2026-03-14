@@ -3,8 +3,10 @@ import { PageHeader } from "@/components/layout/page-header";
 import { FeaturesGrid } from "@/components/sections/features-grid";
 import { CTASection } from "@/components/sections/cta-section";
 import { SectionWrapper } from "@/components/common/section-wrapper";
-import { HOW_WE_WORK, VALUES, CONTACT_INFO } from "@/lib/constants";
+import { VALUES, CONTACT_INFO } from "@/lib/constants";
 import HowWeWork from "@/components/sections/HowWeWork";
+import { apiFetch } from "@/lib/api";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "About Alliance Sourcing BD | Our Story & Values",
@@ -17,7 +19,9 @@ export const metadata: Metadata = {
   },
 };
 
-export default function AboutPage() {
+export default async function AboutPage() {
+  const data = await apiFetch("/api/established-excellence", 30)
+  const story = data?.[0]
   return (
     <>
       {/* Page Header */}
@@ -34,11 +38,14 @@ export default function AboutPage() {
       {/* Story Section */}
       <SectionWrapper className="py-12 md:py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+
           {/* Image */}
           <div>
-            <img
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/fb86a83f78a644e88971076764479de1529ddfe7-BpIo4doqYFZdJAmpXCj0z6jL0SZHhF.png"
-              alt="Our garment facility"
+            <Image
+              width={600}
+              height={400}
+              src={story?.image}
+              alt={story?.title}
               className="rounded-lg shadow-lg w-full"
             />
           </div>
@@ -46,32 +53,23 @@ export default function AboutPage() {
           {/* Content */}
           <div>
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
-              Established Excellence
+              {story?.title}
             </h2>
 
             <h3 className="text-xl font-semibold text-slate-700 mb-4">
-              Professional buying house services
+              {story?.subtitle}
             </h3>
 
-            <p className="text-slate-600 mb-4 leading-relaxed">
-              Founded with a vision to revolutionize the apparel industry, Alliance Sourcing BD
-              has grown into a global leader in garment sourcing. With decades of collective
-              expertise, we bridge the gap between world-class brands and high-quality
-              manufacturing units in Bangladesh and beyond.
-            </p>
-
-            <p className="text-slate-600 mb-4 leading-relaxed">
-              Our journey is defined by a relentless pursuit of excellence, ethical practices,
-              and a deep understanding of the fast-evolving fashion landscape. We started as a
-              small team with a big ambition: to make international sourcing transparent,
-              efficient, and sustainable.
-            </p>
-
-            <p className="text-slate-600 leading-relaxed">
-              Today, we work with hundreds of brands and manufacturers, ensuring every partnership
-              reflects our commitment to quality, ethical standards, and mutual growth.
-            </p>
+            {story?.paragraphs?.map((para: string, index: number) => (
+              <p
+                key={index}
+                className="text-slate-600 mb-4 leading-relaxed"
+              >
+                {para}
+              </p>
+            ))}
           </div>
+
         </div>
       </SectionWrapper>
 
@@ -81,7 +79,7 @@ export default function AboutPage() {
       </div>
 
       {/* Process Section */}
-      <HowWeWork/>
+      <HowWeWork />
 
       {/* CTA */}
       <CTASection

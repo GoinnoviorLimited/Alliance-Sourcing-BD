@@ -2,7 +2,6 @@ import { Metadata } from "next";
 import { PageHeader } from "@/components/layout/page-header";
 import { SectionWrapper } from "@/components/common/section-wrapper";
 import { CTASection } from "@/components/sections/cta-section";
-import { MachineryCard } from "@/components/cards/machinery-card";
 import { MACHINERY, CONTACT_INFO } from "@/lib/constants";
 import MachineryInventory from "./Machenary";
 import MachineGallery from "./MachenaryGallary";
