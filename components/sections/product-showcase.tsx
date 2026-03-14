@@ -1,3 +1,4 @@
+import { apiFetch } from "@/lib/api"
 import { groupProducts } from "@/lib/product"
 import Image from "next/image"
 
@@ -8,8 +9,9 @@ type Product = {
   imageURL: string
 }
 
-export function ProductShowcase({ products }: { products: Product[] }) {
-  const grouped = groupProducts(products)
+export  async function ProductShowcase() {
+  const data = await apiFetch("/api/products", 10)
+  const grouped = groupProducts(data)
 
   return (
     <div className="">
@@ -42,7 +44,8 @@ export function ProductShowcase({ products }: { products: Product[] }) {
                         <Image
                           src={item.imageURL}
                           alt={item.product}
-                          fill
+                          width={300}
+                          height={200}
                           className="object-cover"
                         />
                       </div>

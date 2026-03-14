@@ -164,7 +164,7 @@ export default function HowWeWork({ steps }: { steps: Step[] }) {
         {/* RIGHT */}
         <div className="flex flex-col">
           {steps?.map((step, i) => (
-            <StepItem key={step.id} step={step} isLast={i === steps.length - 1} />
+            <StepItem key={i} step={step} isLast={i === steps.length - 1} />
           ))}
         </div>
 
