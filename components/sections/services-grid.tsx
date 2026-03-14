@@ -1,18 +1,18 @@
 import { Service } from "@/lib/types";
 import { ServiceCard } from "@/components/cards/service-card";
 import { SectionWrapper } from "@/components/common/section-wrapper";
+import { apiFetch } from "@/lib/api";
 
 interface ServicesGridProps {
   title: string;
   subtitle?: string;
-  services: Service[];
 }
 
-export function ServicesGrid({
+export async function ServicesGrid({
   title,
   subtitle,
-  services,
 }: ServicesGridProps) {
+  const services = await apiFetch("/api/buying-house", 30)
   return (
     <SectionWrapper className="py-16 md:py-24 bg-white">
       <div className="text-center mb-16 animate-in fade-in slide-in-from-top">
@@ -28,8 +28,12 @@ export function ServicesGrid({
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {services.map((service, index) => (
-          <div key={service.id} className="animate-in fade-in" style={{ animationDelay: `${index * 150}ms` }}>
+        {services.map((service: Service, index: number) => (
+          <div
+            key={service.id}
+            className="animate-in fade-in"
+            style={{ animationDelay: `${index * 150}ms` }}
+          >
             <ServiceCard {...service} />
           </div>
         ))}

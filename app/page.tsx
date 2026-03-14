@@ -73,7 +73,7 @@ export default function Home() {
       <ServicesGrid
         title="Buying house services"
         subtitle="We manage every step of your sourcing journey with precision"
-        services={SERVICES}
+        // services={SERVICES}
       />
       
       <FactoryAndMachinery />
