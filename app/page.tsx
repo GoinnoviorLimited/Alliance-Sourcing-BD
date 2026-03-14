@@ -14,6 +14,8 @@ import HowWeWork from "@/components/sections/HowWeWork";
 import ProductsAndServices from "@/components/sections/ProductsAndServices";
 import FactoryAndMachinery from "@/components/sections/FactoryAndMachinery";
 import { getBannerSlides } from "@/lib/banner";
+import { getWeWorks } from "@/lib/weWork";
+import HowWeWorkSection from "@/components/sections/HowWeWorkSection";
 
 export const metadata: Metadata = {
   title: "Alliance Sourcing BD | Professional Buying & Sourcing Services",
@@ -29,6 +31,7 @@ export const metadata: Metadata = {
 
 export default async function Home() {
   const slides = await getBannerSlides()
+  const steps = await getWeWorks()
   return (
     <>
       {/* Banner Carousel */}
@@ -41,7 +44,7 @@ export default async function Home() {
         columns={4}
       />
 
-      <HowWeWork />
+      <HowWeWorkSection />
       <div className="bg-gradient-to-b from-blue-50 to-white">
         {/* Professional Buying House Services */}
         <ImageTextSection

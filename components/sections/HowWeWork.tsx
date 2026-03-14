@@ -136,8 +136,8 @@ const StepItem = ({ step, isLast }: { step: Step; isLast: boolean }) => {
 };
 
 // ── MAIN COMPONENT ─────────────────────────────────────────
-export default function HowWeWork() {
-  const { label, heading, cta, steps } = howWeWorkData;
+export default function HowWeWork({ steps }: { steps: Step[] }) {
+  const { label, heading, cta } = howWeWorkData;
 
   return (
     <section className="w-full bg-white">
@@ -163,7 +163,7 @@ export default function HowWeWork() {
 
         {/* RIGHT */}
         <div className="flex flex-col">
-          {steps.map((step, i) => (
+          {steps?.map((step, i) => (
             <StepItem key={step.id} step={step} isLast={i === steps.length - 1} />
           ))}
         </div>
