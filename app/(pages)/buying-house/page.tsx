@@ -6,6 +6,7 @@ import { SectionWrapper } from "@/components/common/section-wrapper";
 import { SERVICES, CONTACT_INFO, PRODUCT_CATEGORIES } from "@/lib/constants";
 import { ProductShowcase } from "@/components/sections/product-showcase";
 import HowWeWork from "@/components/sections/HowWeWork";
+import HowWeWorkSection from "@/components/sections/HowWeWorkSection";
 
 export const metadata: Metadata = {
   title: "Buying House Services | Alliance Sourcing BD",
@@ -36,13 +37,12 @@ export default function BuyingHousePage() {
       <ServicesGrid
         title="Buying house services"
         subtitle="We manage every step of your sourcing journey with precision"
-        services={SERVICES}
       />
 
       {/* Product Expertise Section */}
       <ProductShowcase categories={PRODUCT_CATEGORIES} />
 
-      <HowWeWork />
+      <HowWeWorkSection />
 
       {/* CTA Section */}
       <CTASection

@@ -7,6 +7,7 @@ import { VALUES, CONTACT_INFO } from "@/lib/constants";
 import HowWeWork from "@/components/sections/HowWeWork";
 import { apiFetch } from "@/lib/api";
 import Image from "next/image";
+import HowWeWorkSection from "@/components/sections/HowWeWorkSection";
 
 export const metadata: Metadata = {
   title: "About Alliance Sourcing BD | Our Story & Values",
@@ -79,7 +80,7 @@ export default async function AboutPage() {
       </div>
 
       {/* Process Section */}
-      <HowWeWork />
+      <HowWeWorkSection />
 
       {/* CTA */}
       <CTASection
