@@ -5,6 +5,8 @@ import { CTASection } from "@/components/sections/cta-section";
 import { MACHINERY, CONTACT_INFO } from "@/lib/constants";
 import MachineryInventory from "./Machenary";
 import MachineGallery from "./MachenaryGallary";
+import { apiFetch } from "@/lib/api";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Factory & Machinery | Alliance Sourcing BD",
@@ -17,7 +19,9 @@ export const metadata: Metadata = {
   },
 };
 
-export default function FactoryMachineryPage() {
+export default async function FactoryMachineryPage() {
+  const data = await apiFetch("/api/factory-info", 30)
+  const factoryInfo = data?.[0]
   return (
     <>
       {/* Page Header */}
@@ -37,19 +41,18 @@ export default function FactoryMachineryPage() {
           {/* Content */}
           <div>
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
-              Open Factory
+              {factoryInfo?.title}
             </h2>
             <h3 className="text-xl font-semibold text-slate-700 mb-4">
-              The Ways to Keep Business Growing
+              {factoryInfo?.subtitle}
             </h3>
             <p className="text-slate-600 mb-6 leading-relaxed">
-              Are you interested to know details about our factory, production system and company
-              policy at a glance? Please have a look at the provided pdf file.
+              {factoryInfo?.description}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="#"
+                href={factoryInfo?.actions}
                 className="inline-flex items-center justify-center px-6 py-3 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-colors"
               >
                 <span className="mr-2">📄</span>
@@ -63,13 +66,14 @@ export default function FactoryMachineryPage() {
               </a>
             </div>
           </div>
-
           {/* Image */}
           <div>
-            <img
-              src="https://i.postimg.cc/904WZ0jr/THREAD-SUCKING-MACHINE.png"
+            <Image
+              src={factoryInfo?.image}
               alt="Our factory"
               className="rounded-lg shadow-lg w-full"
+              width={600}
+              height={400}
             />
           </div>
         </div>
@@ -84,7 +88,7 @@ export default function FactoryMachineryPage() {
           We invest in the latest industry 4.0 technology to reduce waste and maximize efficiency
         </p>
 
-        <MachineGallery/>
+        <MachineGallery />
 
         <MachineryInventory />
       </SectionWrapper>

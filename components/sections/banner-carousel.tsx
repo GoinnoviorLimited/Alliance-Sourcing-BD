@@ -16,40 +16,7 @@ interface BannerSlide {
   };
 }
 
-const bannerSlides: BannerSlide[] = [
-  {
-    id: 1,
-    title: 'Your trusted partner in apparel sourcing',
-    description: 'Professional buying house services with global reach and local expertise',
-    image: '/garment-rack.jpg',
-    cta: {
-      text: 'Explore Services',
-      href: '/buying-house',
-    },
-  },
-  {
-    id: 2,
-    title: 'Manufacturing Excellence',
-    description: 'State-of-the-art facilities meeting the highest global ethical and quality standards',
-    image: '/factory-interior.jpg',
-    cta: {
-      text: 'View Factory',
-      href: '/factory-machinery',
-    },
-  },
-  {
-    id: 3,
-    title: 'Quality You Can Trust',
-    description: 'Rigorous testing at every production stage for superior results',
-    image: '/garment-rack.jpg',
-    cta: {
-      text: 'Quality Standards',
-      href: '/buying-house',
-    },
-  },
-];
-
-export function BannerCarousel() {
+export function BannerCarousel({ slides }: { slides: BannerSlide[] }) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlay, setIsAutoPlay] = useState(true);
 
@@ -57,7 +24,7 @@ export function BannerCarousel() {
     if (!isAutoPlay) return;
 
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % bannerSlides.length);
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 3000);
 
     return () => clearInterval(interval);
@@ -68,14 +35,14 @@ export function BannerCarousel() {
   };
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % bannerSlides.length);
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + bannerSlides.length) % bannerSlides.length);
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
 
-  const slide = bannerSlides[currentSlide];
+  const slide = slides[currentSlide];
 
   return (
     <div 
@@ -84,7 +51,7 @@ export function BannerCarousel() {
       // onMouseLeave={() => setIsAutoPlay(true)}
     >
       {/* Slides */}
-      {bannerSlides.map((item, index) => (
+      {slides.map((item, index) => (
         <div
           key={item.id}
           className={`absolute inset-0 transition-opacity duration-1000 ${
@@ -128,7 +95,7 @@ export function BannerCarousel() {
                 {slide.cta.text}
               </Link>
               <button
-                onClick={() => setCurrentSlide((prev) => (prev + 1) % bannerSlides.length)}
+                onClick={() => setCurrentSlide((prev) => (prev + 1) % slides.length)}
                 className="px-8 py-3 border-2 border-white text-white hover:bg-white/10 font-semibold rounded-lg transition-colors duration-300 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200"
               >
                 Learn More
@@ -156,7 +123,7 @@ export function BannerCarousel() {
 
       {/* Dot Indicators */}
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2">
-        {bannerSlides.map((_, index) => (
+        {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}

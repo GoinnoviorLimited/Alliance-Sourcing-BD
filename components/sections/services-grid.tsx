@@ -30,7 +30,7 @@ export async function ServicesGrid({
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {services.map((service: Service, index: number) => (
           <div
-            key={service.id}
+            key={index}
             className="animate-in fade-in"
             style={{ animationDelay: `${index * 150}ms` }}
           >

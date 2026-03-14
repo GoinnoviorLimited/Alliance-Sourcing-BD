@@ -13,6 +13,7 @@ import {
 import HowWeWork from "@/components/sections/HowWeWork";
 import ProductsAndServices from "@/components/sections/ProductsAndServices";
 import FactoryAndMachinery from "@/components/sections/FactoryAndMachinery";
+import { getBannerSlides } from "@/lib/banner";
 
 export const metadata: Metadata = {
   title: "Alliance Sourcing BD | Professional Buying & Sourcing Services",
@@ -26,11 +27,12 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Home() {
+export default async function Home() {
+  const slides = await getBannerSlides()
   return (
     <>
       {/* Banner Carousel */}
-      <BannerCarousel />
+      <BannerCarousel slides={slides}/>
 
       {/* What Sets Us Apart Section */}
       <FeaturesGrid
@@ -73,15 +75,11 @@ export default function Home() {
       <ServicesGrid
         title="Buying house services"
         subtitle="We manage every step of your sourcing journey with precision"
-        // services={SERVICES}
       />
       
       <FactoryAndMachinery />
 
       <ProductsAndServices />
-
-      {/* Product Showcase Section */}
-      {/* <ProductShowcase categories={PRODUCT_CATEGORIES} /> */}
 
       {/* CTA Section */}
       <CTASection
