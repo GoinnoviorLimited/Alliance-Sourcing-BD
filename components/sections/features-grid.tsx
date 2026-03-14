@@ -1,5 +1,6 @@
 import { FeatureCard } from "@/components/cards/feature-card";
 import { SectionWrapper } from "@/components/common/section-wrapper";
+import { apiFetch } from "@/lib/api";
 
 interface Feature {
   title: string;
@@ -14,10 +15,9 @@ interface FeaturesGridProps {
   columns?: 2 | 3 | 4;
 }
 
-export function FeaturesGrid({
+export async function FeaturesGrid({
   title,
   subtitle,
-  features,
   columns = 4,
 }: FeaturesGridProps) {
   const gridClass = {
@@ -26,11 +26,13 @@ export function FeaturesGrid({
     4: "md:grid-cols-4",
   }[columns];
 
+  const features = await apiFetch("/api/apart", 30)
+
   return (
     <SectionWrapper className="py-16 md:py-24 bg-white">
       <div className="text-center mb-16 animate-in fade-in slide-in-from-top">
         <p className="text-sm font-semibold text-cyan-600 mb-3 uppercase tracking-wider">Why</p>
-        <h2 
+        <h2
           className="text-4xl sm:text-5xl font-bold text-slate-900 mb-4"
           style={{ fontFamily: 'var(--font-syne)' }}
         >
@@ -42,8 +44,12 @@ export function FeaturesGrid({
       </div>
 
       <div className={`grid grid-cols-1 ${gridClass} gap-6 md:gap-8`}>
-        {features.map((feature, index) => (
-          <div key={index} className="animate-in fade-in" style={{ animationDelay: `${index * 100}ms` }}>
+        {features.map((feature: Feature, index: number) => (
+          <div
+            key={index}
+            className="animate-in fade-in"
+            style={{ animationDelay: `${index * 100}ms` }}
+          >
             <FeatureCard {...feature} />
           </div>
         ))}
