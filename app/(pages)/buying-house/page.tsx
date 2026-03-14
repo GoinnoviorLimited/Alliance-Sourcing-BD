@@ -40,7 +40,7 @@ export default function BuyingHousePage() {
       />
 
       {/* Product Expertise Section */}
-      <ProductShowcase categories={PRODUCT_CATEGORIES} />
+      <ProductShowcase products={PRODUCT_CATEGORIES} />
 
       <HowWeWorkSection />
 

@@ -203,92 +203,38 @@ export const VALUES = [
 export const PRODUCT_CATEGORIES = [
   {
     category: "Knitwear",
-    description: "Premium quality knitted apparel with excellent craftsmanship",
-    products: [
-      {
-        id: "knitwear-1",
-        name: "Premium Cotton Tee",
-        image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3105a5e1e47bd6c51724d9ef89fd867243462197-jU21omSUdf2kP7KEQVK23sTylm4Hqd.jpg",
-        description: "100% cotton comfort",
-      },
-      {
-        id: "knitwear-2",
-        name: "Classic Pullover Hoodie",
-        image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3105a5e1e47bd6c51724d9ef89fd867243462197-jU21omSUdf2kP7KEQVK23sTylm4Hqd.jpg",
-        description: "Premium fleece, relaxed cuts",
-      },
-      {
-        id: "knitwear-3",
-        name: "Pique Polo Shirt",
-        image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3105a5e1e47bd6c51724d9ef89fd867243462197-jU21omSUdf2kP7KEQVK23sTylm4Hqd.jpg",
-        description: "Moisture-wicking, Comfort Styling",
-      },
-      {
-        id: "knitwear-4",
-        name: "Jersey Henley",
-        image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3105a5e1e47bd6c51724d9ef89fd867243462197-jU21omSUdf2kP7KEQVK23sTylm4Hqd.jpg",
-        description: "Soft weave, Timeless Style",
-      },
-    ],
+    subcategory: "T-Shirt",
+    product: "Classic Cotton Crew T-Shirt",
+    imageURL: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3105a5e1e47bd6c51724d9ef89fd867243462197-jU21omSUdf2kP7KEQVK23sTylm4Hqd.jpg"
+  },
+  {
+    category: "Knitwear",
+    subcategory: "T-Shirt",
+    product: "Premium Soft Touch V-Neck T-Shirt",
+    imageURL: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3105a5e1e47bd6c51724d9ef89fd867243462197-jU21omSUdf2kP7KEQVK23sTylm4Hqd.jpg"
+  },
+  {
+    category: "Knitwear",
+    subcategory: "Polo",
+    product: "Pique Polo Shirt",
+    imageURL: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3105a5e1e47bd6c51724d9ef89fd867243462197-jU21omSUdf2kP7KEQVK23sTylm4Hqd.jpg"
+  },
+  {
+    category: "Knitwear",
+    subcategory: "Polo",
+    product: "Urban Style Graphic T-Shirt",
+    imageURL: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3105a5e1e47bd6c51724d9ef89fd867243462197-jU21omSUdf2kP7KEQVK23sTylm4Hqd.jpg"
   },
   {
     category: "Woven",
-    description: "Sophisticated woven fabrics suitable for formal and casual wear",
-    products: [
-      {
-        id: "woven-1",
-        name: "Oxford Button-Down",
-        image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3105a5e1e47bd6c51724d9ef89fd867243462197-jU21omSUdf2kP7KEQVK23sTylm4Hqd.jpg",
-        description: "Formal & Casual Tailoring",
-      },
-      {
-        id: "woven-2",
-        name: "Slim Fit Chinos",
-        image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3105a5e1e47bd6c51724d9ef89fd867243462197-jU21omSUdf2kP7KEQVK23sTylm4Hqd.jpg",
-        description: "Modern cut & refined fabric",
-      },
-      {
-        id: "woven-3",
-        name: "Summer Linen Shirt",
-        image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3105a5e1e47bd6c51724d9ef89fd867243462197-jU21omSUdf2kP7KEQVK23sTylm4Hqd.jpg",
-        description: "Breathable, relaxed fit",
-      },
-      {
-        id: "woven-4",
-        name: "Unstructured Blazer",
-        image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3105a5e1e47bd6c51724d9ef89fd867243462197-jU21omSUdf2kP7KEQVK23sTylm4Hqd.jpg",
-        description: "Lightweight, Classic Look",
-      },
-    ],
+    subcategory: "Five Pocket Twill",
+    product: "Men's Five Pocket TRS",
+    imageURL: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3105a5e1e47bd6c51724d9ef89fd867243462197-jU21omSUdf2kP7KEQVK23sTylm4Hqd.jpg"
   },
   {
-    category: "Denim",
-    description: "Premium denim products with exceptional durability and style",
-    products: [
-      {
-        id: "denim-1",
-        name: "Raw Indigo Denim",
-        image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3105a5e1e47bd6c51724d9ef89fd867243462197-jU21omSUdf2kP7KEQVK23sTylm4Hqd.jpg",
-        description: "Classic Streetwear style",
-      },
-      {
-        id: "denim-2",
-        name: "Trucker Jacket",
-        image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3105a5e1e47bd6c51724d9ef89fd867243462197-jU21omSUdf2kP7KEQVK23sTylm4Hqd.jpg",
-        description: "Iconic, Versatile Stitching",
-      },
-      {
-        id: "denim-3",
-        name: "Casual Denim Shorts",
-        image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3105a5e1e47bd6c51724d9ef89fd867243462197-jU21omSUdf2kP7KEQVK23sTylm4Hqd.jpg",
-        description: "Modern hem, Faded Design",
-      },
-      {
-        id: "denim-4",
-        name: "Slaty-Black Denim",
-        image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3105a5e1e47bd6c51724d9ef89fd867243462197-jU21omSUdf2kP7KEQVK23sTylm4Hqd.jpg",
-        description: "Faded fit, Masculine style",
-      },
-    ],
-  },
+    category: "Woven",
+    subcategory: "Five Pocket Twill",
+    product: "Women's Five Pocket TRS",
+    imageURL: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3105a5e1e47bd6c51724d9ef89fd867243462197-jU21omSUdf2kP7KEQVK23sTylm4Hqd.jpg"
+  }
 ];

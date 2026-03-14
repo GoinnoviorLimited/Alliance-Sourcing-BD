@@ -1,74 +1,65 @@
-'use client';
+import { groupProducts } from "@/lib/product"
+import Image from "next/image"
 
-import React from 'react';
-import { SectionWrapper } from '@/components/common/section-wrapper';
-import { ProductCard } from '@/components/cards/product-card';
-
-interface ProductCategory {
-  category: string;
-  description: string;
-  products: Array<{
-    id: string;
-    name: string;
-    image: string;
-    description?: string;
-  }>;
+type Product = {
+  category: string
+  subcategory: string
+  product: string
+  imageURL: string
 }
 
-interface ProductShowcaseProps {
-  title?: string;
-  subtitle?: string;
-  categories: ProductCategory[];
-}
+export function ProductShowcase({ products }: { products: Product[] }) {
+  const grouped = groupProducts(products)
 
-export function ProductShowcase({
-  title = 'Product Expertise',
-  subtitle = 'We specialize in a wide array of textile categories, ensuring the right technical expertise for every product type',
-  categories,
-}: ProductShowcaseProps) {
   return (
-    <SectionWrapper className="py-16 md:py-24 bg-white">
-      {/* Header */}
+    <div className="">
       <div className="text-center mb-16 animate-in fade-in slide-in-from-top">
         <h2
           className="text-4xl sm:text-5xl font-bold text-slate-900 mb-4"
           style={{ fontFamily: 'var(--font-syne)' }}
         >
-          {title}
+          Products
         </h2>
-        {subtitle && (
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">{subtitle}</p>
-        )}
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            Explore our wide range of high-quality products across different categories and subcategories.
+          </p>
       </div>
+      <div className="space-y-12 max-w-7xl mx-auto px-5">
+        {Object.entries(grouped).map(([category, subcats]) => (
+          <div key={category}>
+            <h2 className="text-3xl font-bold mb-6">{category}</h2>
 
-      {/* Product Categories */}
-      <div className="space-y-16">
-        {categories.map((category, catIndex) => (
-          <div key={category.category} className="animate-in fade-in" style={{ animationDelay: `${catIndex * 200}ms` }}>
-            {/* Category Title */}
-            <h3
-              className="text-2xl font-semibold text-slate-900 mb-8"
-              style={{ fontFamily: 'var(--font-syne)' }}
-            >
-              {category.category}
-            </h3>
-            <p className="text-slate-600 mb-8">{category.description}</p>
+            {Object.entries(subcats).map(([subcat, items]) => (
+              <div key={subcat} className="mb-8">
+                <h3 className="text-xl font-semibold mb-4">{subcat}</h3>
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                  {items.map((item, i) => (
+                    <div
+                      key={i}
+                      className=" rounded-lg overflow-hidden shadow-sm hover:shadow-md transition"
+                    >
+                      <div className="relative w-full h-56">
+                        <Image
+                          src={item.imageURL}
+                          alt={item.product}
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
 
-            {/* Products Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {category.products.map((product, prodIndex) => (
-                <div key={product.id} className="animate-in fade-in" style={{ animationDelay: `${(catIndex * 200) + (prodIndex * 100)}ms` }}>
-                  <ProductCard
-                    name={product.name}
-                    description={product.description || ''}
-                    image={product.image}
-                  />
+                      <div className="p-4">
+                        <p className="font-medium text-slate-800">
+                          {item.product}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         ))}
       </div>
-    </SectionWrapper>
-  );
+    </div>
+  )
 }
