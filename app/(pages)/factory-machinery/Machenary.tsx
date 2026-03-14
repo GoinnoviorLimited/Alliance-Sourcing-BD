@@ -1,36 +1,4 @@
-'use client'
-
-/* ───────────────── DATA (Flat Structure) ───────────────── */
-const machines = [
-  { category: "Cutting Machinery", name: "Cutting Machine 10\"", brand: "KM", quantity: 3 },
-  { category: "Cutting Machinery", name: "Cutting Machine 8\"", brand: "KM", quantity: 3 },
-  { category: "Cutting Machinery", name: "Cutting Machine 8\"", brand: "Open", quantity: 1 },
-  { category: "Cutting Machinery", name: "Band Knife Machine", brand: "Open", quantity: 1 },
-  { category: "Cutting Machinery", name: "End Cutting Machine", brand: "Eastman", quantity: 2 },
-  { category: "Cutting Machinery", name: "Fabric Inspection Machine", brand: "Open", quantity: 1 },
-  { category: "Cutting Machinery", name: "Fusing Machine (Medium) HP-650", brand: "Open", quantity: 2 },
-  { category: "Cutting Machinery", name: "Drill Machine", brand: "Open", quantity: 2 },
-  { category: "Cutting Machinery", name: "Numbering Machine", brand: "Open", quantity: 5 },
-
-  { category: "Sewing Machinery", name: "Plain Machine", brand: "Juki", quantity: 120 },
-  { category: "Sewing Machinery", name: "Overlock Machine", brand: "Pegasus", quantity: 45 },
-  { category: "Sewing Machinery", name: "Flat Lock Machine", brand: "Pegasus", quantity: 20 },
-  { category: "Sewing Machinery", name: "Feed of the Arm", brand: "Juki", quantity: 8 },
-  { category: "Sewing Machinery", name: "Button Hole Machine", brand: "Juki", quantity: 6 },
-  { category: "Sewing Machinery", name: "Button Stitch Machine", brand: "Juki", quantity: 6 },
-  { category: "Sewing Machinery", name: "Bar Tack Machine", brand: "Juki", quantity: 4 },
-  { category: "Sewing Machinery", name: "Kansai Machine", brand: "Kansai", quantity: 4 },
-
-  { category: "Finishing Machinery", name: "Steam Iron", brand: "Tefal", quantity: 30 },
-  { category: "Finishing Machinery", name: "Vacuum Iron Table", brand: "Open", quantity: 15 },
-  { category: "Finishing Machinery", name: "Boiler", brand: "Open", quantity: 2 },
-  { category: "Finishing Machinery", name: "Pressing Machine", brand: "Open", quantity: 4 },
-  { category: "Finishing Machinery", name: "Hanger Clipping Machine", brand: "Open", quantity: 3 },
-
-  { category: "Embroidery Machinery", name: "Embroidery Machine (15 Head)", brand: "Tajima", quantity: 2 },
-  { category: "Embroidery Machinery", name: "Embroidery Machine (6 Head)", brand: "Tajima", quantity: 1 },
-  { category: "Embroidery Machinery", name: "Embroidery Machine (2 Head)", brand: "Open", quantity: 3 }
-]
+import { apiFetch } from "@/lib/api"
 
 /* ───────────────── TYPES ───────────────── */
 interface Machine {
@@ -122,11 +90,12 @@ const CategoryTable = ({ category }: { category: Category }) => {
 }
 
 /* ───────────────── MAIN COMPONENT ───────────────── */
-export default function MachineryInventory() {
+export default async function MachineryInventory() {
+  const machines = await apiFetch("/api/machinery-inventory", 30)
 
   const categories = groupMachines(machines)
 
-  const grandTotal = machines.reduce((sum, m) => sum + m.quantity, 0)
+  const grandTotal = machines.reduce((sum: number, m: Machine) => sum + m.quantity, 0)
 
   return (
     <section className="w-full bg-white">
