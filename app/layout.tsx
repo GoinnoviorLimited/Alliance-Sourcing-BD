@@ -5,6 +5,7 @@ import { Navbar } from '@/components/layout/navbar'
 import { Footer } from '@/components/layout/footer'
 import { SITE_NAME, SITE_DESCRIPTION } from '@/lib/constants'
 import './globals.css'
+import WhatsAppButton from '@/components/sections/WhatsAppButton'
 
 const syne = Syne({ 
   subsets: ["latin"],
@@ -55,6 +56,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <Analytics />
+        <WhatsAppButton />
       </body>
     </html>
   )

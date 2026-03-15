@@ -78,9 +78,9 @@ export default async function Home() {
         subtitle="We manage every step of your sourcing journey with precision"
       />
       
+      <ProductsAndServices />
       <FactoryAndMachinery />
 
-      <ProductsAndServices />
 
       {/* CTA Section */}
       <CTASection
