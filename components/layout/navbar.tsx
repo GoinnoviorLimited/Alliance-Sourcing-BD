@@ -15,7 +15,7 @@ export function Navbar() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="animate-in fade-in slide-in-from-left duration-500">
+          <div className="flex animate-in fade-in slide-in-from-left duration-500">
             <Logo />
           </div>
 

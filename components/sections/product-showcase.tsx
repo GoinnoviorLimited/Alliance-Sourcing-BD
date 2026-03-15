@@ -40,7 +40,7 @@ export  async function ProductShowcase() {
                       key={i}
                       className=" rounded-lg overflow-hidden shadow-sm hover:shadow-md transition"
                     >
-                      <div className="relative w-full h-56">
+                      <div className=" w-full h-56">
                         <Image
                           src={item.imageURL}
                           alt={item.product}
@@ -51,8 +51,8 @@ export  async function ProductShowcase() {
                       </div>
 
                       <div className="p-4">
-                        <p className="font-medium text-slate-800">
-                          {item.product}
+                        <p className="font-medium text-white">
+                          {item?.product}
                         </p>
                       </div>
                     </div>
