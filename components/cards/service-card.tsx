@@ -1,12 +1,15 @@
 import { Service } from "@/lib/types";
+import Image from "next/image";
 
 interface ServiceCardProps extends Service {}
 
-export function ServiceCard({ title, description, icon }: ServiceCardProps) {
+export function ServiceCard({ title, description, image }: ServiceCardProps) {
   return (
     <div className="group bg-white rounded-lg overflow-hidden hover:bg-[#0C97D5] border border-gray-200 transition-all duration-300">
       <div className="p-8">
-        <div className="text-3xl xl:text-4xl mb-6 md:mb-8 xl:mb-10 text-cyan-500">{icon}</div>
+        <div className="text-3xl xl:text-4xl mb-6 md:mb-8 xl:mb-10 text-cyan-500">
+          <Image src={image} alt={title} width={48} height={48} />
+        </div>
         <h3 
           className="text-2xl font-semibold text-slate-900 group-hover:text-white mb-3"
           style={{ fontFamily: 'var(--font-syne)' }}
