@@ -2,7 +2,6 @@ import { Metadata } from "next";
 import { PageHeader } from "@/components/layout/page-header";
 import { SectionWrapper } from "@/components/common/section-wrapper";
 import { CTASection } from "@/components/sections/cta-section";
-import { Button } from "@/components/ui/button";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { CONTACT_INFO } from "@/lib/constants";
 import ContactForm from "@/components/sections/contact-form";
@@ -94,7 +93,7 @@ export default function ContactPage() {
         <ContactForm />
 
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3649.3838424678644!2d90.15753242346826!3d23.819089917635826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c2e32f3c4a2b%3A0x1234567890abcdef!2sAsha%20Plaza%2C%20Dhaka%2C%20Bangladesh!5e0!3m2!1sen!2sbd!4v1234567890"
+          src={CONTACT_INFO.mapEmbedUrl}
           width="100%"
           height="100%"
           style={{ border: 0 }}
