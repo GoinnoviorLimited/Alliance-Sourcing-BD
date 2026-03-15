@@ -25,7 +25,7 @@ export function BannerCarousel({ slides }: { slides: BannerSlide[] }) {
 
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 3000);
+    }, 4000);
 
     return () => clearInterval(interval);
   }, [isAutoPlay]);
@@ -94,12 +94,6 @@ export function BannerCarousel({ slides }: { slides: BannerSlide[] }) {
               >
                 {slide.cta.text}
               </Link>
-              <button
-                onClick={() => setCurrentSlide((prev) => (prev + 1) % slides.length)}
-                className="px-8 py-3 border-2 border-white text-white hover:bg-white/10 font-semibold rounded-lg transition-colors duration-300 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200"
-              >
-                Learn More
-              </button>
             </div>
           </div>
         </div>
