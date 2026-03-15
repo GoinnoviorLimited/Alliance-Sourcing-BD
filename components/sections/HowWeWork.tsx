@@ -1,4 +1,5 @@
 'use client'
+import Image from "next/image";
 import { JSX, useEffect, useRef, useState } from "react";
 
 // ── JSON DATA ──────────────────────────────────────────────
@@ -9,76 +10,13 @@ const howWeWorkData = {
     text: "Discuss",
     href: "#",
   },
-  steps: [
-    {
-      id: 1,
-      title: "Consultation",
-      description: "We listen to your needs and understand your specifications",
-      icon: "consultation",
-    },
-    {
-      id: 2,
-      title: "Supplier match",
-      description: "We match you with manufacturers who meet your standards",
-      icon: "supplier",
-    },
-    {
-      id: 3,
-      title: "Order management",
-      description: "We negotiate terms and oversee production from start to finish",
-      icon: "order",
-    },
-    {
-      id: 4,
-      title: "Quality check",
-      description: "Every batch is tested against your specifications and standards",
-      icon: "quality",
-    },
-  ],
-};
-
-// ── ICONS ──────────────────────────────────────────────────
-const icons: Record<string, JSX.Element> = {
-  consultation: (
-    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-10 h-10">
-      <rect x="7" y="4" width="26" height="32" rx="3" stroke="#f07d00" strokeWidth="2" />
-      <line x1="13" y1="13" x2="27" y2="13" stroke="#f07d00" strokeWidth="1.8" strokeLinecap="round" />
-      <line x1="13" y1="19" x2="27" y2="19" stroke="#f07d00" strokeWidth="1.8" strokeLinecap="round" />
-      <line x1="13" y1="25" x2="21" y2="25" stroke="#f07d00" strokeWidth="1.8" strokeLinecap="round" />
-      <circle cx="34" cy="36" r="7" stroke="#f07d00" strokeWidth="2" />
-      <line x1="39" y1="41" x2="44" y2="46" stroke="#f07d00" strokeWidth="2.5" strokeLinecap="round" />
-    </svg>
-  ),
-  supplier: (
-    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-10 h-10">
-      <path d="M4 22 C8 16 14 15 19 17 L24 19" stroke="#f07d00" strokeWidth="2" strokeLinecap="round" />
-      <path d="M24 19 C26 17 30 16 33 18 L38 22" stroke="#f07d00" strokeWidth="2" strokeLinecap="round" />
-      <path d="M38 22 L44 16" stroke="#f07d00" strokeWidth="2" strokeLinecap="round" />
-      <path d="M4 30 L10 36 C13 39 17 39 20 37 L29 29 C32 26 36 26 38 28 L44 33" stroke="#f07d00" strokeWidth="2" strokeLinecap="round" fill="none" />
-      <path d="M19 17 C21 20 22 26 19 30 C17 33 13 33 11 31" stroke="#f07d00" strokeWidth="1.8" strokeLinecap="round" fill="none" />
-    </svg>
-  ),
-  order: (
-    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-10 h-10">
-      <path d="M5 8 L9 10 L13 28 H35 L40 14 H11" stroke="#9ca3af" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-      <circle cx="18" cy="34" r="3" stroke="#9ca3af" strokeWidth="2" />
-      <circle cx="31" cy="34" r="3" stroke="#9ca3af" strokeWidth="2" />
-      <polyline points="24,15 27,20 34,12" stroke="#f07d00" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  ),
-  quality: (
-    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-10 h-10">
-      <circle cx="24" cy="19" r="11" stroke="#f07d00" strokeWidth="2" />
-      <polyline points="16,29 13,44 24,37 35,44 32,29" stroke="#f07d00" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-      <polyline points="19,19 22,23 29,15" stroke="#f07d00" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  ),
 };
 
 // ── TYPES ──────────────────────────────────────────────────
 interface Step {
   id: number;
   title: string;
+  image: string;
   description: string;
   icon: string;
 }
@@ -115,7 +53,7 @@ const StepItem = ({ step, isLast }: { step: Step; isLast: boolean }) => {
           className="flex items-center justify-center rounded-full bg-orange-50 shrink-0"
           style={{ width: 52, height: 52 }}
         >
-          {icons[step.icon]}
+          <Image src={step?.image} alt="Step background" width={52} height={52} className="absolute" />
         </div>
         {!isLast && (
           <div className="flex-1 mt-2 w-px bg-gray-200" style={{ minHeight: "40px" }} />

@@ -6,11 +6,9 @@ import { ImageTextSection } from "@/components/sections/image-text-section";
 import { CTASection } from "@/components/sections/cta-section";
 import { CheckCircle2 } from "lucide-react";
 import {
-  SERVICES,
   VALUES,
   CONTACT_INFO,
 } from "@/lib/constants";
-import HowWeWork from "@/components/sections/HowWeWork";
 import ProductsAndServices from "@/components/sections/ProductsAndServices";
 import FactoryAndMachinery from "@/components/sections/FactoryAndMachinery";
 import { getBannerSlides } from "@/lib/banner";
