@@ -163,7 +163,7 @@ export default function FactoryAndMachinery() {
           </div>
 
           {/* LEFT — Image */}
-          <div className="w-full overflow-hidden rounded-2xl aspect-[4/5] sm:aspect-[3/4] md:aspect-auto md:h-[520px]">
+          <div className="w-full overflow-hidden rounded-2xl aspect-4/5 sm:aspect-3/4 md:aspect-auto md:h-[520px]">
             <img
               src={image.src}
               alt={image.alt}

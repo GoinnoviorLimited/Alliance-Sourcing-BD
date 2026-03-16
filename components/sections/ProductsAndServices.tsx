@@ -122,12 +122,12 @@ export default function ProductsAndServices() {
   const { label, heading, description, cta, image, categories } = productsData;
 
   return (
-    <section className="w-full bg-gradient-to-b from-blue-50 to-white">
+    <section className="w-full bg-linear-to-b from-blue-50 to-white">
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-14 py-14 sm:py-20 lg:py-24">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center">
 
           {/* LEFT — Image */}
-          <div className="w-full overflow-hidden rounded-2xl aspect-[4/5] sm:aspect-[3/4] md:aspect-auto md:h-[520px]">
+          <div className="w-full overflow-hidden rounded-2xl aspect-4/5 sm:aspect-3/4 md:aspect-auto md:h-[520px]">
             <img
               src={image.src}
               alt={image.alt}
