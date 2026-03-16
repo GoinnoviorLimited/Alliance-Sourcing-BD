@@ -250,21 +250,17 @@ const ContactForm: React.FC = () => {
             <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
               Subject <span className="text-red-500">*</span>
             </label>
-            <select
+            <input
+              type="text"
               id="subject"
               name="subject"
               value={formData.subject}
               onChange={handleChange}
               onBlur={handleBlur}
               className={getInputClasses('subject')}
+              placeholder="Subject of your message"
               disabled={isSubmitting}
-            >
-              <option value="">Select a subject</option>
-              <option value="general">General Inquiry</option>
-              <option value="support">Technical Support</option>
-              <option value="billing">Billing Question</option>
-              <option value="feedback">Feedback</option>
-            </select>
+            />
             {touched.subject && errors.subject && (
               <p className="mt-1 text-sm text-red-600">{errors.subject}</p>
             )}

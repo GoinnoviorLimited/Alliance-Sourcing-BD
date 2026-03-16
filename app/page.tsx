@@ -6,11 +6,15 @@ import { ImageTextSection } from "@/components/sections/image-text-section";
 import { CTASection } from "@/components/sections/cta-section";
 import { CheckCircle2 } from "lucide-react";
 import {
-  SERVICES,
   VALUES,
   CONTACT_INFO,
 } from "@/lib/constants";
+<<<<<<< HEAD
 import HowWeWork from "@/components/sections/HowWeWork";
+=======
+import ProductsAndServices from "@/components/sections/ProductsAndServices";
+import FactoryAndMachinery from "@/components/sections/FactoryAndMachinery";
+>>>>>>> a21a59ebcaa1e8da217eca258ab0ad5790eead96
 import { getBannerSlides } from "@/lib/banner";
 import { getWeWorks } from "@/lib/weWork";
 import HowWeWorkSection from "@/components/sections/HowWeWorkSection";
@@ -81,7 +85,13 @@ export default async function Home() {
         subtitle="We manage every step of your sourcing journey with precision"
       />
       
+<<<<<<< HEAD
       <CatalogSection catalogs={catalogs} />
+=======
+      <ProductsAndServices />
+      <FactoryAndMachinery />
+
+>>>>>>> a21a59ebcaa1e8da217eca258ab0ad5790eead96
 
       {/* CTA Section */}
       <CTASection

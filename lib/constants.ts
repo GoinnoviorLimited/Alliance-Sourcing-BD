@@ -8,9 +8,9 @@ export const CONTACT_INFO = {
   email: "info@alliancesourcingbd.com",
   phone: "+880 1700 000000",
   address: "Asha Plaza (2nd floor), Hemayetpur, Savar, Dhaka, Bangladesh",
-  mapUrl: "https://maps.google.com/?q=Dhaka+Bangladesh",
+  mapUrl:"https://www.google.com/maps",
+  mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29195.555081240054!2d90.32838821411136!3d23.83834881036084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c16da106644d%3A0xf414c9bfac137ced!2sGoinnovior%20Limited-%20IT%20Service%20%7C%20IT%20Consulting%20Firm!5e0!3m2!1sen!2sbd!4v1773564622706!5m2!1sen!2sbd",
 };
-
 export const NAVIGATION = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
