@@ -85,13 +85,7 @@ export default async function Home() {
         subtitle="We manage every step of your sourcing journey with precision"
       />
       
-<<<<<<< HEAD
       <CatalogSection catalogs={catalogs} />
-=======
-      <ProductsAndServices />
-      <FactoryAndMachinery />
-
->>>>>>> a21a59ebcaa1e8da217eca258ab0ad5790eead96
 
       {/* CTA Section */}
       <CTASection
