@@ -11,11 +11,11 @@ import {
   CONTACT_INFO,
 } from "@/lib/constants";
 import HowWeWork from "@/components/sections/HowWeWork";
-import ProductsAndServices from "@/components/sections/ProductsAndServices";
-import FactoryAndMachinery from "@/components/sections/FactoryAndMachinery";
 import { getBannerSlides } from "@/lib/banner";
 import { getWeWorks } from "@/lib/weWork";
 import HowWeWorkSection from "@/components/sections/HowWeWorkSection";
+import { getCatalogs } from "@/lib/catalog";
+import CatalogSection from "@/components/sections/CatalogSection";
 
 export const metadata: Metadata = {
   title: "Alliance Sourcing BD | Professional Buying & Sourcing Services",
@@ -32,6 +32,7 @@ export const metadata: Metadata = {
 export default async function Home() {
   const slides = await getBannerSlides()
   const steps = await getWeWorks()
+  const catalogs = await getCatalogs()
   return (
     <>
       {/* Banner Carousel */}
@@ -45,7 +46,7 @@ export default async function Home() {
       />
 
       <HowWeWorkSection />
-      <div className="bg-gradient-to-b from-blue-50 to-white">
+      <div className="bg-linear-to-b from-blue-50 to-white">
         {/* Professional Buying House Services */}
         <ImageTextSection
           title="Professional buying house services"
@@ -80,9 +81,7 @@ export default async function Home() {
         subtitle="We manage every step of your sourcing journey with precision"
       />
       
-      <FactoryAndMachinery />
-
-      <ProductsAndServices />
+      <CatalogSection catalogs={catalogs} />
 
       {/* CTA Section */}
       <CTASection
