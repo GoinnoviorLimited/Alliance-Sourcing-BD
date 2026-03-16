@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { BannerCarousel } from "@/components/sections/banner-carousel";
 import { FeaturesGrid } from "@/components/sections/features-grid";
 import { ServicesGrid } from "@/components/sections/services-grid";
-import { ImageTextSection } from "@/components/sections/image-text-section";
+import { ServicesSection } from "@/components/sections/ServicesSection";
 import { CTASection } from "@/components/sections/cta-section";
 import { CheckCircle2 } from "lucide-react";
 import {
@@ -15,6 +15,7 @@ import { getWeWorks } from "@/lib/weWork";
 import HowWeWorkSection from "@/components/sections/HowWeWorkSection";
 import { getCatalogs } from "@/lib/catalog";
 import CatalogSection from "@/components/sections/CatalogSection";
+import { getServicesSections } from "@/lib/services";
 
 export const metadata: Metadata = {
   title: "Alliance Sourcing BD | Professional Buying & Sourcing Services",
@@ -32,6 +33,7 @@ export default async function Home() {
   const slides = await getBannerSlides()
   const steps = await getWeWorks()
   const catalogs = await getCatalogs()
+  const services = await getServicesSections()
   return (
     <>
       {/* Banner Carousel */}
@@ -45,33 +47,8 @@ export default async function Home() {
       />
 
       <HowWeWorkSection />
-      <div className="bg-linear-to-b from-blue-50 to-white">
-        {/* Professional Buying House Services */}
-        <ImageTextSection
-          title="Professional buying house services"
-          description="Founded with a vision to revolutionize the apparel industry, Alliance Sourcing BD has grown into the leading global leader in garment sourcing. With decades of collective expertise, we bridge the gap between world-class brands and high-quality manufacturing units in Bangladesh and beyond. Our journey is defined by a relentless pursuit of excellence, ethical practices, and a deep understanding of the fast-evolving fashion landscape."
-          image="/garment-rack.jpg"
-          imageAlt="Professional buying services"
-          imagePosition="left"
-          features={[
-            {
-              icon: <CheckCircle2 className="w-6 h-6" />,
-              title: "Expert evaluation",
-              description: "Thorough assessment of manufacturer capabilities"
-            },
-            {
-              icon: <CheckCircle2 className="w-6 h-6" />,
-              title: "Quality compliance",
-              description: "Rigorous inspection and certification"
-            },
-            {
-              icon: <CheckCircle2 className="w-6 h-6" />,
-              title: "Cost optimization",
-              description: "Best pricing without compromising quality"
-            }
-          ]}
-        />
-      </div>
+      {/* Dynamic Services Section pulled from Admin DB */}
+      <ServicesSection data={services} />
 
 
       {/* Buying House Services Section */}
