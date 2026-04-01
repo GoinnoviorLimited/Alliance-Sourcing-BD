@@ -1,5 +1,5 @@
-'use client'
-import React from 'react';
+"use client";
+import React from "react";
 
 // ── ICONS ──────────────────────────────────────────────────
 const CategoryIcon = ({ name }: { name: string }) => {
@@ -8,7 +8,15 @@ const CategoryIcon = ({ name }: { name: string }) => {
   switch (name) {
     case "knitwear":
       return (
-        <svg className={cls} viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <svg
+          className={cls}
+          viewBox="0 0 32 32"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
           <rect x="4" y="10" width="24" height="16" rx="2" />
           <path d="M4 14 C8 11 12 13 16 11 C20 9 24 11 28 14" />
           <path d="M10 10 L8 4 M22 10 L24 4" />
@@ -16,7 +24,15 @@ const CategoryIcon = ({ name }: { name: string }) => {
       );
     case "denim":
       return (
-        <svg className={cls} viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <svg
+          className={cls}
+          viewBox="0 0 32 32"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
           <line x1="4" y1="8" x2="28" y2="8" />
           <line x1="4" y1="13" x2="28" y2="13" />
           <line x1="4" y1="18" x2="28" y2="18" />
@@ -26,7 +42,15 @@ const CategoryIcon = ({ name }: { name: string }) => {
       );
     case "woven":
       return (
-        <svg className={cls} viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <svg
+          className={cls}
+          viewBox="0 0 32 32"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
           <rect x="4" y="4" width="24" height="24" rx="2" />
           <line x1="4" y1="11" x2="28" y2="11" />
           <line x1="4" y1="17" x2="28" y2="17" />
@@ -38,7 +62,15 @@ const CategoryIcon = ({ name }: { name: string }) => {
       );
     case "accessories":
       return (
-        <svg className={cls} viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <svg
+          className={cls}
+          viewBox="0 0 32 32"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
           <circle cx="10" cy="16" r="5" />
           <circle cx="10" cy="16" r="2" />
           <path d="M15 16 H28" />
@@ -73,7 +105,13 @@ interface CatalogItem {
 }
 
 // ── CATEGORY CARD ──────────────────────────────────────────
-const CategoryCard = ({ category, index }: { category: Category, index: number }) => {
+const CategoryCard = ({
+  category,
+  index,
+}: {
+  category: Category;
+  index: number;
+}) => {
   const iconName = category.icon || "knitwear";
   return (
     <div className="flex gap-3 group">
@@ -93,22 +131,29 @@ const CategoryCard = ({ category, index }: { category: Category, index: number }
 };
 
 // ── MAIN COMPONENT ─────────────────────────────────────────
-export default function CatalogSection({ catalogs }: { catalogs: CatalogItem[] }) {
+export default function CatalogSection({
+  catalogs,
+}: {
+  catalogs: CatalogItem[];
+}) {
   if (!catalogs || catalogs.length === 0) return null;
 
   return (
     <>
-      {catalogs.map((catalog, index) => {
+      {[...catalogs].reverse().map((catalog, index) => {
         const isEven = index % 2 === 0;
-        const bgColor = isEven ? "bg-gradient-to-b from-blue-50 to-white" : "bg-white";
+        const bgColor = isEven ? "bg-blue-50 " : "bg-white";
 
         return (
           <section key={catalog._id} className={`w-full ${bgColor}`}>
             <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-14 py-14 sm:py-20 lg:py-24">
-              <div className={`grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center`}>
-                
+              <div
+                className={`grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center`}
+              >
                 {/* Content Order depends on index */}
-                <div className={`flex flex-col gap-6 ${isEven ? 'md:order-1' : 'md:order-2'}`}>
+                <div
+                  className={`flex flex-col gap-6 ${isEven ? "md:order-1" : "md:order-2"}`}
+                >
                   {/* ... contents ... */}
                   <p className="text-xs font-semibold tracking-widest uppercase text-gray-800">
                     {catalog.label}
@@ -141,7 +186,9 @@ export default function CatalogSection({ catalogs }: { catalogs: CatalogItem[] }
                 </div>
 
                 {/* Image Order depends on index */}
-                <div className={`w-full overflow-hidden rounded-2xl aspect-4/5 sm:aspect-3/4 md:aspect-auto md:h-[520px] ${isEven ? 'md:order-2' : 'md:order-1'}`}>
+                <div
+                  className={`w-full overflow-hidden rounded-2xl aspect-4/5 sm:aspect-3/4 md:aspect-auto md:h-[520px] ${isEven ? "md:order-2" : "md:order-1"}`}
+                >
                   <img
                     src={catalog.image}
                     alt={catalog.heading}

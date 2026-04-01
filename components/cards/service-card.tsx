@@ -5,18 +5,18 @@ interface ServiceCardProps extends Service {}
 
 export function ServiceCard({ title, description, image }: ServiceCardProps) {
   return (
-    <div className="group bg-white rounded-lg overflow-hidden hover:bg-[#0C97D5] border border-gray-200 transition-all duration-300">
-      <div className="p-8">
-        <div className="text-3xl xl:text-4xl mb-6 md:mb-8 xl:mb-10 text-cyan-500">
+    <div className="group bg-white rounded-lg overflow-hidden hover:bg-[#0C97D5] border border-gray-200 transition-all duration-300 hover:shadow-[0_10px_10px_rgba(0,162,199,0.25)] ">
+      <div className="p-4 ">
+        <div className="text-3xl xl:text-4xl mb-6 text-cyan-500">
           <Image src={image} alt={title} width={48} height={48} />
         </div>
         <h3 
-          className="text-2xl font-semibold text-slate-900 group-hover:text-white mb-3"
+          className="text-md font-semibold text-slate-900 group-hover:text-white mb-1"
           style={{ fontFamily: 'var(--font-syne)' }}
         >
           {title}
         </h3>
-        <p className="text-slate-600 group-hover:text-white leading-relaxed">{description}</p>
+        <p className="text-slate-600 group-hover:text-white leading-relaxed text-xs">{description}</p>
       </div>
     </div>
   );

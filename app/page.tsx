@@ -57,7 +57,7 @@ export default async function Home() {
 
       {/* Buying House Services Section */}
       <ServicesGrid
-        title="Buying house services"
+        title="End-to-end sourcing solutions"
         subtitle="We manage every step of your sourcing journey with precision"
       />
       
