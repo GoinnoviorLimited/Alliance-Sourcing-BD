@@ -46,7 +46,7 @@ export function BannerCarousel({ slides }: { slides: BannerSlide[] }) {
 
   return (
     <div 
-      className="relative w-full h-125 md:h-150 xl:h-[calc(100vh-60px)] overflow-hidden group"
+      className="relative w-full h-125 md:h-150 lg:h-screen xl:h-[calc(100vh-60px)] overflow-hidden group"
       // onMouseEnter={() => setIsAutoPlay(false)}
       // onMouseLeave={() => setIsAutoPlay(true)}
     >
@@ -71,18 +71,18 @@ export function BannerCarousel({ slides }: { slides: BannerSlide[] }) {
       ))}
 
       {/* Content */}
-      <div className="absolute inset-0 flex flex-col mt-20 lg:justify-center items-center">
+      <div className="absolute inset-0 flex flex-col mt-22  2xl:justify-center items-center">
         <div className="max-w-4xl mx-auto px-4 md:px-8 w-full">
           <div className="text-center">
             <h1 
               key={`title-${currentSlide}`}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 animate-in fade-in slide-in-from-bottom-8 duration-700"
+              className="text-4xl md:text-5xl 2xl:text-6xl font-bold text-white mb-4 animate-in fade-in slide-in-from-bottom-8 duration-700"
               style={{ fontFamily: 'var(--font-syne)' }}
             >
               {slide.title}
             </h1>
             <p 
-              className="text-base md:text-md lg:text-xl text-white/90 mb-8 max-w-3xl mx-auto animate-in fade-in slide-in-from-bottom-8 duration-700 delay-100"
+              className="text-sm  2xl:text-xl text-white/90 mb-8 max-w-3xl mx-auto animate-in fade-in slide-in-from-bottom-8 duration-700 delay-100"
               style={{ fontFamily: 'var(--font-inter)' }}
             >
               {slide.description}
