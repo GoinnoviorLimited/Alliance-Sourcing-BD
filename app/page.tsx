@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { BannerCarousel } from "@/components/sections/banner-carousel";
 import { StatusSection } from "@/components/sections/status-section";
+import { SourcingSection } from "@/components/sections/sourcing-section";
 import { FeaturesGrid } from "@/components/sections/features-grid";
 import { ServicesGrid } from "@/components/sections/services-grid";
 import { ServicesSection } from "@/components/sections/ServicesSection";
@@ -40,6 +41,7 @@ export default async function Home() {
       {/* Banner Carousel */}
       <BannerCarousel slides={slides}/>
       <StatusSection />
+      <SourcingSection />
 
       {/* What Sets Us Apart Section */}
       <FeaturesGrid

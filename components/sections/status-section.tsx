@@ -21,7 +21,7 @@ const statusItems = [
 
 export function StatusSection() {
   return (
-    <section className="relative z-30 px-4 md:px-8 -mt-24 md:-mt-28">
+    <section className="relative   z-30 px-4 md:px-8 -mt-24 md:-mt-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-blue-950 rounded-2xl shadow-xl overflow-hidden px-6 md:px-10 py-4 md:py-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
