@@ -7,10 +7,7 @@ import { ServicesGrid } from "@/components/sections/services-grid";
 import { ServicesSection } from "@/components/sections/ServicesSection";
 import { CTASection } from "@/components/sections/cta-section";
 import { CheckCircle2 } from "lucide-react";
-import {
-  VALUES,
-  CONTACT_INFO,
-} from "@/lib/constants";
+import { VALUES, CONTACT_INFO } from "@/lib/constants";
 import HowWeWork from "@/components/sections/HowWeWork";
 import { getBannerSlides } from "@/lib/banner";
 import { getWeWorks } from "@/lib/weWork";
@@ -32,35 +29,30 @@ export const metadata: Metadata = {
 };
 
 export default async function Home() {
-  const slides = await getBannerSlides()
-  const steps = await getWeWorks()
-  const catalogs = await getCatalogs()
-  const services = await getServicesSections()
+  const slides = await getBannerSlides();
+  const steps = await getWeWorks();
+  const catalogs = await getCatalogs();
+  const services = await getServicesSections();
   return (
     <>
       {/* Banner Carousel */}
-      <BannerCarousel slides={slides}/>
+      <BannerCarousel slides={slides} />
       <StatusSection />
       <SourcingSection />
 
       {/* What Sets Us Apart Section */}
-      <FeaturesGrid
-        title="What sets us apart"
-        features={VALUES}
-        columns={4}
-      />
+      <FeaturesGrid title="What sets us apart" features={VALUES} columns={4} />
 
       <HowWeWorkSection />
       {/* Dynamic Services Section pulled from Admin DB */}
       <ServicesSection data={services} />
-
 
       {/* Buying House Services Section */}
       <ServicesGrid
         title="End-to-end sourcing solutions"
         subtitle="We manage every step of your sourcing journey with precision"
       />
-      
+
       <CatalogSection catalogs={catalogs} />
 
       {/* CTA Section */}
@@ -71,7 +63,7 @@ export default async function Home() {
           label: "Contact Us",
           href: `mailto:${CONTACT_INFO.email}`,
         }}
-        backgroundImage="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3105a5e1e47bd6c51724d9ef89fd867243462197-jU21omSUdf2kP7KEQVK23sTylm4Hqd.jpg"
+        backgroundImage="https://i.postimg.cc/3NcsYzxX/multi-colored-garments-hanging-coathangers-boutique-store-generated-by-ai.jpg"
       />
     </>
   );

@@ -5,11 +5,12 @@ export const SITE_DESCRIPTION =
   "Professional buying & sourcing services for apparel, garments, and industrial manufacturing";
 
 export const CONTACT_INFO = {
-  email: "info@alliancesourcingbd.com",
-  phone: "+880 1700 000000",
+  email: "faroque@alliancebdltd.com",
+  phone: "+880 1972-438732",
   address: "Asha Plaza (2nd floor), Hemayetpur, Savar, Dhaka, Bangladesh",
-  mapUrl:"https://www.google.com/maps",
-  mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29195.555081240054!2d90.32838821411136!3d23.83834881036084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c16da106644d%3A0xf414c9bfac137ced!2sGoinnovior%20Limited-%20IT%20Service%20%7C%20IT%20Consulting%20Firm!5e0!3m2!1sen!2sbd!4v1773564622706!5m2!1sen!2sbd",
+  mapUrl: "https://www.google.com/maps",
+  mapEmbedUrl:
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29195.555081240054!2d90.32838821411136!3d23.83834881036084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c16da106644d%3A0xf414c9bfac137ced!2sGoinnovior%20Limited-%20IT%20Service%20%7C%20IT%20Consulting%20Firm!5e0!3m2!1sen!2sbd!4v1773564622706!5m2!1sen!2sbd",
 };
 export const NAVIGATION = [
   { label: "Home", href: "/" },
@@ -55,8 +56,14 @@ export const EXPERTISE_CATEGORIES = {
     title: "Knitwear",
     items: [
       { name: "Premium Cotton Tee", description: "100% cotton comfort" },
-      { name: "Classic Pullover Hoodie", description: "Premium fleece, relaxed cuts" },
-      { name: "Pique Polo Shirt", description: "Moisture-wicking, Comfort Styling" },
+      {
+        name: "Classic Pullover Hoodie",
+        description: "Premium fleece, relaxed cuts",
+      },
+      {
+        name: "Pique Polo Shirt",
+        description: "Moisture-wicking, Comfort Styling",
+      },
       { name: "Jersey Henley", description: "Soft weave, Timeless Style" },
     ],
   },
@@ -84,15 +91,13 @@ export const HOW_WE_WORK = [
   {
     step: 1,
     title: "Consultation",
-    description:
-      "We listen to your needs and understand your specifications",
+    description: "We listen to your needs and understand your specifications",
     icon: "👂",
   },
   {
     step: 2,
     title: "Supplier Match",
-    description:
-      "We match you with manufacturers who meet your standards",
+    description: "We match you with manufacturers who meet your standards",
     icon: "🤝",
   },
   {
@@ -155,25 +160,29 @@ export const TEAM_MEMBERS = [
     id: 1,
     name: "Ahmed Rahman",
     role: "Founder & CEO",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/6284465a0d74cb8635c755a64103c0142f577372-Gz9PeS0Pjm2tZpXoZRpbiupzd5x2T2.jpg",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/6284465a0d74cb8635c755a64103c0142f577372-Gz9PeS0Pjm2tZpXoZRpbiupzd5x2T2.jpg",
   },
   {
     id: 2,
     name: "Sophia Chen",
     role: "Head of Quality Control",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/6284465a0d74cb8635c755a64103c0142f577372-Gz9PeS0Pjm2tZpXoZRpbiupzd5x2T2.jpg",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/6284465a0d74cb8635c755a64103c0142f577372-Gz9PeS0Pjm2tZpXoZRpbiupzd5x2T2.jpg",
   },
   {
     id: 3,
     name: "Marcus Williams",
     role: "Operations Manager",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/6284465a0d74cb8635c755a64103c0142f577372-Gz9PeS0Pjm2tZpXoZRpbiupzd5x2T2.jpg",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/6284465a0d74cb8635c755a64103c0142f577372-Gz9PeS0Pjm2tZpXoZRpbiupzd5x2T2.jpg",
   },
   {
     id: 4,
     name: "Priya Desai",
     role: "Lead Sourcing Specialist",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/6284465a0d74cb8635c755a64103c0142f577372-Gz9PeS0Pjm2tZpXoZRpbiupzd5x2T2.jpg",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/6284465a0d74cb8635c755a64103c0142f577372-Gz9PeS0Pjm2tZpXoZRpbiupzd5x2T2.jpg",
   },
 ];
 
@@ -205,36 +214,42 @@ export const PRODUCT_CATEGORIES = [
     category: "Knitwear",
     subcategory: "T-Shirt",
     product: "Classic Cotton Crew T-Shirt",
-    imageURL: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3105a5e1e47bd6c51724d9ef89fd867243462197-jU21omSUdf2kP7KEQVK23sTylm4Hqd.jpg"
+    imageURL:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3105a5e1e47bd6c51724d9ef89fd867243462197-jU21omSUdf2kP7KEQVK23sTylm4Hqd.jpg",
   },
   {
     category: "Knitwear",
     subcategory: "T-Shirt",
     product: "Premium Soft Touch V-Neck T-Shirt",
-    imageURL: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3105a5e1e47bd6c51724d9ef89fd867243462197-jU21omSUdf2kP7KEQVK23sTylm4Hqd.jpg"
+    imageURL:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3105a5e1e47bd6c51724d9ef89fd867243462197-jU21omSUdf2kP7KEQVK23sTylm4Hqd.jpg",
   },
   {
     category: "Knitwear",
     subcategory: "Polo",
     product: "Pique Polo Shirt",
-    imageURL: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3105a5e1e47bd6c51724d9ef89fd867243462197-jU21omSUdf2kP7KEQVK23sTylm4Hqd.jpg"
+    imageURL:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3105a5e1e47bd6c51724d9ef89fd867243462197-jU21omSUdf2kP7KEQVK23sTylm4Hqd.jpg",
   },
   {
     category: "Knitwear",
     subcategory: "Polo",
     product: "Urban Style Graphic T-Shirt",
-    imageURL: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3105a5e1e47bd6c51724d9ef89fd867243462197-jU21omSUdf2kP7KEQVK23sTylm4Hqd.jpg"
+    imageURL:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3105a5e1e47bd6c51724d9ef89fd867243462197-jU21omSUdf2kP7KEQVK23sTylm4Hqd.jpg",
   },
   {
     category: "Woven",
     subcategory: "Five Pocket Twill",
     product: "Men's Five Pocket TRS",
-    imageURL: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3105a5e1e47bd6c51724d9ef89fd867243462197-jU21omSUdf2kP7KEQVK23sTylm4Hqd.jpg"
+    imageURL:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3105a5e1e47bd6c51724d9ef89fd867243462197-jU21omSUdf2kP7KEQVK23sTylm4Hqd.jpg",
   },
   {
     category: "Woven",
     subcategory: "Five Pocket Twill",
     product: "Women's Five Pocket TRS",
-    imageURL: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3105a5e1e47bd6c51724d9ef89fd867243462197-jU21omSUdf2kP7KEQVK23sTylm4Hqd.jpg"
-  }
+    imageURL:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3105a5e1e47bd6c51724d9ef89fd867243462197-jU21omSUdf2kP7KEQVK23sTylm4Hqd.jpg",
+  },
 ];

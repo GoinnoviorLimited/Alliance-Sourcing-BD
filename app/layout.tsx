@@ -7,6 +7,7 @@ import { Footer } from '@/components/layout/footer'
 import { SITE_NAME, SITE_DESCRIPTION } from '@/lib/constants'
 import './globals.css'
 import WhatsAppButton from '@/components/sections/WhatsAppButton'
+import { ScrollToTop } from '@/components/common/scroll-to-top'
 
 const syne = Syne({ 
   subsets: ["latin"],
@@ -59,6 +60,7 @@ export default function RootLayout({
         <Footer />
         <Analytics />
         <WhatsAppButton />
+        <ScrollToTop />
       </body>
     </html>
   )
