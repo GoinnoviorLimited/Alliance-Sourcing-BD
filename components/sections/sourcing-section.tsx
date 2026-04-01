@@ -1,25 +1,27 @@
 import Image from "next/image";
+import { Button } from "../ui/button";
 
 const sourcingItems = [
   {
     title: "Knitwear",
     description: "T-shirts, polos, hoodies, jersey knitwear, and activewear.",
-    image: "/garment-rack.jpg",
+    image: "https://i.postimg.cc/52BfSNtD/1672.jpg",
   },
   {
     title: "Woven",
     description: "Oxford shirts, chinos, blazers, and formal woven garments.",
-    image: "/factory-interior.jpg",
+    image: "https://i.postimg.cc/rsRk0q32/close-up-flannel-shirt-detail.jpg",
   },
   {
     title: "Denim",
     description: "Raw indigo denim, trucker jackets, jeans, and denim shorts.",
-    image: "/placeholder.jpg",
+    image:
+      "https://i.postimg.cc/4NtYjGdz/wide-assortment-jeans-hanging-store.jpg",
   },
   {
     title: "Sweaters",
     description: "Cardigans, pullovers, and seasonal knit sweaters.",
-    image: "/placeholder.jpg",
+    image: "https://i.postimg.cc/kgvBXyWh/2148312122.jpg",
   },
 ];
 
@@ -31,19 +33,23 @@ export function SourcingSection() {
           <h3 className="text-sm font-semibold tracking-wider text-cyan-600 uppercase mb-2">
             PRODUCTS
           </h3>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'var(--font-syne)' }}>
+          <h2
+            className="text-4xl md:text-5xl font-bold text-gray-900 mb-4"
+            style={{ fontFamily: "var(--font-syne)" }}
+          >
             What we source
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-            Core categories with flexible customization, fabrics, trims, packaging, and compliance requirements.
+            Core categories with flexible customization, fabrics, trims,
+            packaging, and compliance requirements.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {sourcingItems.map((item, index) => (
-            <div 
-              key={index} 
-              className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow duration-300"
+            <div
+              key={index}
+              className="bg-white rounded-xl  border border-gray-100 overflow-hidden  shadow-[0px_0px_10px_rgba(0,0,0,0.08)] hover:shadow-[0px_0px_15px_rgba(0,0,0,0.2)] hover:-mt-3 transition-all duration-500"
             >
               <div className="relative  w-full p-4">
                 <Image
@@ -55,15 +61,22 @@ export function SourcingSection() {
                 />
               </div>
               <div className="p-6 pt-1">
-                <h4 className="text-xl font-bold text-gray-900 mb-2" style={{ fontFamily: 'var(--font-syne)' }}>
+                <h4
+                  className="text-xl font-bold text-gray-900 mb-2"
+                  style={{ fontFamily: "var(--font-syne)" }}
+                >
                   {item.title}
                 </h4>
                 <p className="text-sm text-gray-600 leading-relaxed">
                   {item.description}
                 </p>
               </div>
+             
             </div>
           ))}
+        </div>
+        <div className="flex justify-center mt-16">
+          <Button className="group bg-white hover:bg-cyan-500 text-slate-900 hover:text-white px-8 py-2 text-base h-auto font-bold rounded-full transition-all duration-500 shadow-xl hover:shadow-cyan-500/25 flex items-center gap-3">Explore our catalog</Button>
         </div>
       </div>
     </section>

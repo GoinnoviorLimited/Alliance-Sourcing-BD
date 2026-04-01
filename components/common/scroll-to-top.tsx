@@ -8,11 +8,8 @@ export function ScrollToTop() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 300) {
-        setShowButton(true);
-      } else {
-        setShowButton(false);
-      }
+      // Show button after scrolling down 300px
+      setShowButton(window.scrollY > 300);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -29,16 +26,34 @@ export function ScrollToTop() {
   return (
     <button
       onClick={scrollToTop}
-      className={`fixed bottom-30 right-6 z-9998 p-3 rounded-full bg-[#0C97D5] text-white shadow-lg transition-all duration-300 transform hover:scale-110 hover:bg-black group ${
-        showButton ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10 pointer-events-none"
-      }`}
-      aria-label="Scroll to top"
+      className={`
+        fixed bottom-30 right-6 z-50 
+        
+        flex items-center justify-center
+        w-[50px] h-[50px] rounded-full 
+        bg-black text-white overflow-hidden border-none
+        shadow-[0px_0px_0px_4px_rgba(180,160,255,0.25)]
+        
+        transition-all duration-300 ease-in-out group
+        
+        hover:w-[140px] hover:rounded-[50px] hover:bg-[#00b8db]
+        
+        ${
+          showButton
+            ? "opacity-100 translate-y-0 pointer-events-auto"
+            : "opacity-0 translate-y-10 pointer-events-none"
+        }
+      `}
+      aria-label="Back to top"
     >
-      <ChevronUp className="w-6 h-6 transition-transform duration-300 group-hover:-translate-y-1" />
-      
-      {/* Tooltip */}
-      <span className="absolute right-full mr-3 top-1/2 -translate-y-1/2 px-2 py-1 bg-gray-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
-        Scroll to Top
+      {/* The Icon: Slides up and out on hover */}
+      <div className="flex items-center justify-center transition-transform duration-300 group-hover:-translate-y-[200%]">
+        <ChevronUp className="w-5 h-5" strokeWidth={3} />
+      </div>
+
+      {/* The Text: Slides in from the bottom on hover */}
+      <span className="absolute font-semibold text-[0px] opacity-0 transition-all duration-300 translate-y-10 group-hover:text-[13px] group-hover:opacity-100 group-hover:translate-y-0 whitespace-nowrap">
+        Back to Top
       </span>
     </button>
   );

@@ -24,72 +24,65 @@ export default function ContactPage() {
         title="Get in Touch"
         backgroundImage="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3105a5e1e47bd6c51724d9ef89fd867243462197-jU21omSUdf2kP7KEQVK23sTylm4Hqd.jpg"
         subtitle="We're here to answer your questions and discuss your sourcing needs"
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Contact Us" },
-        ]}
+        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Contact Us" }]}
       />
 
       {/* Contact Section */}
-      <SectionWrapper className="py-12 md:py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+      <SectionWrapper className="py-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-16">
           {/* Email */}
-          <div className="text-center">
-            <div className="flex justify-center mb-4">
-              <div className="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center">
-                <Mail className="w-8 h-8 text-cyan-600" />
-              </div>
+          <div className="group bg-white rounded-2xl border border-slate-100 p-8 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+            <div className="w-12 h-12 bg-cyan-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-cyan-100 transition-colors duration-300">
+              <Mail className="w-6 h-6 text-cyan-600" />
             </div>
-            <h3 className="text-lg font-semibold text-slate-900 mb-2">Email</h3>
-            <p className="text-slate-600 text-sm mb-4">Send us a message</p>
+            <h3 className="text-xl font-bold text-slate-900 mb-2" style={{ fontFamily: "var(--font-syne)" }}>Email</h3>
+            <p className="text-slate-500 text-sm mb-6 leading-relaxed">Our friendly team is here to help.</p>
             <a
               href={`mailto:${CONTACT_INFO.email}`}
-              className="text-cyan-600 hover:text-cyan-700 font-medium text-sm"
+              className="text-cyan-600 hover:text-cyan-700 font-semibold text-sm inline-flex items-center gap-2 group/link"
             >
               {CONTACT_INFO.email}
+              <div className="w-4 h-px bg-cyan-600 transition-all duration-300 group-hover/link:w-8"></div>
             </a>
           </div>
 
           {/* Phone */}
-          <div className="text-center">
-            <div className="flex justify-center mb-4">
-              <div className="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center">
-                <Phone className="w-8 h-8 text-cyan-600" />
-              </div>
+          <div className="group bg-white rounded-2xl border border-slate-100 p-8 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+            <div className="w-12 h-12 bg-cyan-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-cyan-100 transition-colors duration-300">
+              <Phone className="w-6 h-6 text-cyan-600" />
             </div>
-            <h3 className="text-lg font-semibold text-slate-900 mb-2">Phone</h3>
-            <p className="text-slate-600 text-sm mb-4">Call us directly</p>
+            <h3 className="text-xl font-bold text-slate-900 mb-2" style={{ fontFamily: "var(--font-syne)" }}>Phone</h3>
+            <p className="text-slate-500 text-sm mb-6 leading-relaxed">Mon-Fri from 9am to 6pm.</p>
             <a
               href={`tel:${CONTACT_INFO.phone}`}
-              className="text-cyan-600 hover:text-cyan-700 font-medium text-sm"
+              className="text-cyan-600 hover:text-cyan-700 font-semibold text-sm inline-flex items-center gap-2 group/link"
             >
               {CONTACT_INFO.phone}
+              <div className="w-4 h-px bg-cyan-600 transition-all duration-300 group-hover/link:w-8"></div>
             </a>
           </div>
 
           {/* Office */}
-          <div className="text-center">
-            <div className="flex justify-center mb-4">
-              <div className="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center">
-                <MapPin className="w-8 h-8 text-cyan-600" />
-              </div>
+          <div className="group bg-white rounded-2xl border border-slate-100 p-8 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+            <div className="w-12 h-12 bg-cyan-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-cyan-100 transition-colors duration-300">
+              <MapPin className="w-6 h-6 text-cyan-600" />
             </div>
-            <h3 className="text-lg font-semibold text-slate-900 mb-2">Office</h3>
-            <p className="text-slate-600 text-sm mb-4">Dhaka, Bangladesh</p>
+            <h3 className="text-xl font-bold text-slate-900 mb-2" style={{ fontFamily: "var(--font-syne)" }}>Office</h3>
+            <p className="text-slate-500 text-sm mb-6 leading-relaxed">{CONTACT_INFO.address}</p>
             <a
               href={CONTACT_INFO.mapUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-cyan-600 hover:text-cyan-700 font-medium text-sm"
+              className="text-cyan-600 hover:text-cyan-700 font-semibold text-sm inline-flex items-center gap-2 group/link"
             >
               Get directions
+              <div className="w-4 h-px bg-cyan-600 transition-all duration-300 group-hover/link:w-8"></div>
             </a>
           </div>
         </div>
       </SectionWrapper>
 
-
-      <div className="container mx-auto px-5 lg:px-0 grid grid-cols-1 md:grid-cols-2 gap-5 pb-10 lg:pb-20">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-5 pb-10 lg:pb-20">
         <ContactForm />
 
         <iframe
@@ -102,7 +95,6 @@ export default function ContactPage() {
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
-
 
       {/* CTA Section */}
       <CTASection

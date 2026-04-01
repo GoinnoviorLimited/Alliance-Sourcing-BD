@@ -14,7 +14,7 @@ export function Navbar() {
 
   // Function to check if a route is active
   const isActiveRoute = (href: string) => {
-    if (href === '/') {
+    if (href === "/") {
       return pathname === href;
     }
     return pathname.startsWith(href);
@@ -33,17 +33,20 @@ export function Navbar() {
           <div className="hidden md:flex items-center gap-8">
             {NAVIGATION.map((item, index) => {
               const isActive = isActiveRoute(item.href);
-              
+
               return (
                 <Link
                   key={item.href}
                   href={item.href}
                   className={`text-sm font-medium transition-colors animate-in fade-in duration-500 relative group ${
-                    isActive 
-                      ? 'text-cyan-600' 
-                      : 'text-slate-700 hover:text-cyan-600'
+                    isActive
+                      ? "text-cyan-600"
+                      : "text-slate-700 hover:text-cyan-600"
                   }`}
-                  style={{ fontFamily: 'var(--font-inter)', animationDelay: `${(index + 1) * 75}ms` }}
+                  style={{
+                    fontFamily: "var(--font-inter)",
+                    animationDelay: `${(index + 1) * 75}ms`,
+                  }}
                 >
                   {item.label}
                 </Link>
@@ -52,9 +55,17 @@ export function Navbar() {
           </div>
 
           {/* CTA Button */}
-          <a href={`tel:${CONTACT_INFO.phone}`} className="animate-in fade-in slide-in-from-right duration-500">
-            <Button className="hidden sm:inline-flex bg-cyan-500 hover:bg-cyan-600 text-white transition-all duration-300 hover:shadow-lg hover:scale-105">
-              Contact US
+
+          <a href={`mailto:${CONTACT_INFO.email}`} className="mb-2">
+            <Button
+              className="
+
+      w-full mt-2 min-w-[120px] min-h-[44px] px-[1.4em] py-[0.9em] rounded-[0.5em] 
+      text-white font-medium cursor-pointer border-none 
+      bg-[linear-gradient(325deg,hsla(217,100%,56%,1)_0%,hsla(194,100%,69%,1)_55%,hsla(217,100%,56%,1)_90%)] bg-size-[280%_auto] bg-top-left shadow-[0px_0px_20px_rgba(71,184,255,0.5),0px_5px_5px_-1px_rgba(58,125,233,0.25),inset_4px_4px_8px_rgba(175,230,255,0.5),inset_-4px_-4px_8px_rgba(19,95,216,0.35)] transition-all duration-800 ease-in-out hover:bg-top-right focus:outline-none focus:shadow-[0_0_0_3px_#ffffff,0_0_0_6px_hsla(217,100%,56%,1)] active:shadow-[0_0_0_3px_#ffffff,0_0_0_6px_hsla(217,100%,56%,1)]
+    "
+            >
+              Speak with us
             </Button>
           </a>
 
@@ -77,15 +88,15 @@ export function Navbar() {
           <div className="md:hidden pb-4 space-y-2">
             {NAVIGATION.map((item) => {
               const isActive = isActiveRoute(item.href);
-              
+
               return (
                 <Link
                   key={item.href}
                   href={item.href}
                   className={`block px-2 py-2 text-sm font-medium rounded-md transition-colors ${
-                    isActive 
-                      ? 'text-cyan-600 bg-cyan-50' 
-                      : 'text-slate-600 hover:text-cyan-600 hover:bg-slate-50'
+                    isActive
+                      ? "text-cyan-600 bg-cyan-50"
+                      : "text-slate-600 hover:text-cyan-600 hover:bg-slate-50"
                   }`}
                   onClick={() => setIsOpen(false)}
                 >

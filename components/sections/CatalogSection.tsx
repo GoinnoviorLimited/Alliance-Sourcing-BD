@@ -177,7 +177,7 @@ export default function CatalogSection({
                     <div className="pt-2">
                       <a
                         href={catalog.cta.href || "#"}
-                        className="inline-flex items-center px-6 py-3 border border-gray-300 rounded-lg text-sm font-medium text-gray-800 bg-transparent transition-all duration-200 hover:border-gray-800 hover:bg-gray-50"
+                        className="inline-flex items-center justify-center w-[100px] h-[45px] rounded-[8px] text-black bg-[#f3f7fe] transition-all duration-300 hover:bg-[#3b82f6] hover:text-white hover:shadow-[0_0_0_5px_#3b83f65f] cursor-pointer border border-black/20 hover:border-0"
                       >
                         {catalog.cta.text}
                       </a>

@@ -42,8 +42,6 @@ export default function BuyingHousePage() {
       {/* Product Expertise Section */}
       <ProductShowcase />
 
-      <HowWeWorkSection />
-
       {/* CTA Section */}
       <CTASection
         title="Ready to start sourcing?"

@@ -51,6 +51,7 @@ export function Hero({
                   {primaryCta.label}
                 </Button>
               </a>
+              
             )}
             {secondaryCta && (
               <a href={secondaryCta.href}>
