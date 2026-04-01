@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Syne, Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { Navbar } from '@/components/layout/navbar'
+import { TopNavbar } from '@/components/layout/top-navbar'
 import { Footer } from '@/components/layout/footer'
 import { SITE_NAME, SITE_DESCRIPTION } from '@/lib/constants'
 import './globals.css'
@@ -50,6 +51,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${syne.variable} ${inter.variable}`}>
       <body className="font-sans antialiased flex flex-col min-h-screen">
+        <TopNavbar />
         <Navbar />
         <main className="flex-1">
           {children}
