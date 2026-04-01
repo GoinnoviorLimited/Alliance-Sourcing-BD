@@ -46,7 +46,7 @@ export function BannerCarousel({ slides }: { slides: BannerSlide[] }) {
 
   return (
     <div 
-      className="relative w-full h-125 md:h-150 lg:h-screen xl:h-[calc(100vh-60px)] overflow-hidden group"
+      className="relative w-full h-125 md:h-150  xl:h-[calc(100vh-60px)] overflow-hidden group"
       // onMouseEnter={() => setIsAutoPlay(false)}
       // onMouseLeave={() => setIsAutoPlay(true)}
     >
@@ -71,8 +71,8 @@ export function BannerCarousel({ slides }: { slides: BannerSlide[] }) {
       ))}
 
       {/* Content */}
-      <div className="absolute inset-0 flex flex-col mt-22  2xl:justify-center items-center">
-        <div className="max-w-4xl mx-auto px-4 md:px-8 w-full">
+      <div className="absolute inset-0 flex flex-col mt-26 banner-content-container items-center">
+        <div className="max-w-7xl mx-auto px-4 md:px-8 w-full">
           <div className="text-center">
             <h1 
               key={`title-${currentSlide}`}
@@ -82,7 +82,7 @@ export function BannerCarousel({ slides }: { slides: BannerSlide[] }) {
               {slide.title}
             </h1>
             <p 
-              className="text-sm  2xl:text-xl text-white/90 mb-8 max-w-3xl mx-auto animate-in fade-in slide-in-from-bottom-8 duration-700 delay-100"
+              className="text-sm  2xl:text-xl text-white/90 mb-8 max-w-5xl mx-auto animate-in fade-in slide-in-from-bottom-8 duration-700 delay-100"
               style={{ fontFamily: 'var(--font-inter)' }}
             >
               {slide.description}
@@ -90,7 +90,7 @@ export function BannerCarousel({ slides }: { slides: BannerSlide[] }) {
             <div className="flex gap-4 justify-center">
               <Link
                 href={slide.cta.href}
-                className="px-8 py-3 bg-cyan-500 hover:bg-cyan-600 text-white font-semibold rounded-lg transition-colors duration-300 inline-block animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200"
+                className="px-8 py-3 bg-cyan-500 hover:bg-cyan-600 text-white font-semibold rounded-lg transition-colors duration-700 inline-block animate-in fade-in slide-in-from-bottom-8 delay-200"
               >
                 {slide.cta.text}
               </Link>
