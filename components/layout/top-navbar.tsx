@@ -3,7 +3,7 @@ import { CONTACT_INFO } from "@/lib/constants";
 
 export function TopNavbar() {
   return (
-    <div className="bg-cyan-600 text-white py-2 text-sm hidden md:block">
+    <div className="bg-blue-950 text-white py-2 text-sm hidden md:block">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
         <div className="flex items-center space-x-6">
           <div className="flex items-center space-x-2">
