@@ -6,6 +6,7 @@ interface FeatureCardProps {
   image?: string;
 }
 
+
 export function FeatureCard({ title, description, image }: FeatureCardProps) {
   return (
     <div className="flex flex-col p-5 rounded-lg bg-white hover:bg-gray-100 transition-shadow duration-300 border border-gray-200">
