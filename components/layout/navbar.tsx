@@ -56,7 +56,7 @@ export function Navbar() {
 
           {/* CTA Button */}
 
-          <a href={`tel:${CONTACT_INFO.phone}`} className="hidden md:block mb-2">
+          <a href={`mailto:${CONTACT_INFO.email}`} className="hidden md:block mb-2">
             <Button
               className="
 

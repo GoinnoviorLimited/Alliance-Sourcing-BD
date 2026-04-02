@@ -71,12 +71,22 @@ export function SourcingSection() {
                   {item.description}
                 </p>
               </div>
-             
             </div>
           ))}
         </div>
         <div className="flex justify-center mt-16">
-          <Button className="group bg-white hover:bg-cyan-500 text-slate-900 hover:text-white px-8 py-2 text-base h-auto font-bold rounded-full transition-all duration-500 shadow-xl hover:shadow-cyan-500/25 flex items-center gap-3">Explore our catalog</Button>
+          <a href="/buying-house">
+            <Button
+              className="
+          
+                w-full mt-2 min-w-[120px] min-h-[44px] px-[1.4em] py-[0.9em] rounded-[0.5em] 
+                text-white font-medium cursor-pointer border-none 
+                bg-[linear-gradient(325deg,hsla(217,100%,56%,1)_0%,hsla(194,100%,69%,1)_55%,hsla(217,100%,56%,1)_90%)] bg-size-[280%_auto] bg-top-left shadow-[0px_0px_20px_rgba(71,184,255,0.5),0px_5px_5px_-1px_rgba(58,125,233,0.25),inset_4px_4px_8px_rgba(175,230,255,0.5),inset_-4px_-4px_8px_rgba(19,95,216,0.35)] transition-all duration-800 ease-in-out hover:bg-top-right focus:outline-none focus:shadow-[0_0_0_3px_#ffffff,0_0_0_6px_hsla(217,100%,56%,1)] active:shadow-[0_0_0_3px_#ffffff,0_0_0_6px_hsla(217,100%,56%,1)]
+              "
+            >
+              Explore our catalog
+            </Button>
+          </a>
         </div>
       </div>
     </section>
