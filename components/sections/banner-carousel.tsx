@@ -72,12 +72,12 @@ export function BannerCarousel({ slides }: { slides: BannerSlide[] }) {
       ))}
 
       {/* Content */}
-      <div className="absolute inset-0 flex flex-col mt-26 banner-content-container items-center">
+      <div className="absolute inset-0 flex flex-col mt-12 md:mt-26 banner-content-container items-center">
         <div className="max-w-7xl mx-auto px-4 md:px-8 w-full">
           <div className="text-center">
             <h1
               key={`title-${currentSlide}`}
-              className="text-4xl md:text-5xl 2xl:text-6xl font-bold text-white mb-4 animate-in fade-in slide-in-from-bottom-8 duration-700"
+              className="text-2xl md:text-5xl 2xl:text-6xl font-bold text-white mb-4 animate-in fade-in slide-in-from-bottom-8 duration-700"
               style={{ fontFamily: "var(--font-syne)" }}
             >
               {slide.title}
