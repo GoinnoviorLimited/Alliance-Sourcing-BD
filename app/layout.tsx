@@ -44,6 +44,8 @@ export const metadata: Metadata = {
   },
 }
 
+import { GoogleTranslate } from '@/components/common/google-translate'
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -61,6 +63,7 @@ export default function RootLayout({
         <Analytics />
         <WhatsAppButton />
         <ScrollToTop />
+        <GoogleTranslate />
       </body>
     </html>
   )

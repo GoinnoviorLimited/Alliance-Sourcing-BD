@@ -3,8 +3,8 @@ import Image from "next/image";
 
 function LogoItem({ src, title, subtitle }: { src: string; title: string; subtitle: string }) {
   return (
-    <div className="flex items-center gap-2">
-      <div className="w-10 h-10 relative flex-shrink-0">
+    <div className="flex items-center gap-2 notranslate" translate="no">
+      <div className="w-10 h-10 relative shrink-0">
         <Image
           src={src}
           alt={title}

@@ -7,6 +7,7 @@ import { Menu, X } from "lucide-react";
 import { Logo } from "@/components/common/logo";
 import { NAVIGATION, CONTACT_INFO } from "@/lib/constants";
 import { Button } from "@/components/ui/button";
+import { LanguageSwitcher } from "@/components/common/language-switcher";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -69,18 +70,22 @@ export function Navbar() {
             </Button>
           </a>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2"
-            aria-label="Toggle menu"
-          >
-            {isOpen ? (
-              <X className="w-6 h-6 text-slate-900" />
-            ) : (
-              <Menu className="w-6 h-6 text-slate-900" />
-            )}
-          </button>
+          {/* Mobile UI (Language Switcher + Menu Button) */}
+          <div className="md:hidden flex items-center gap-3">
+            <LanguageSwitcher className="text-slate-700 border-slate-200 bg-slate-50 hover:bg-slate-100 text-[12px] px-2" />
+            
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="p-1"
+              aria-label="Toggle menu"
+            >
+              {isOpen ? (
+                <X className="w-6 h-6 text-slate-900" />
+              ) : (
+                <Menu className="w-6 h-6 text-slate-900" />
+              )}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
