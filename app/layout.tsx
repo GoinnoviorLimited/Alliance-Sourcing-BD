@@ -60,7 +60,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
-        <Analytics />
+        {/* <Analytics /> */}
         <WhatsAppButton />
         <ScrollToTop />
         <GoogleTranslate />
