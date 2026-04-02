@@ -8,6 +8,7 @@ import { SITE_NAME, SITE_DESCRIPTION } from '@/lib/constants'
 import './globals.css'
 import WhatsAppButton from '@/components/sections/WhatsAppButton'
 import { ScrollToTop } from '@/components/common/scroll-to-top'
+import { LoadingScreen } from '@/components/common/loading-screen'
 
 const syne = Syne({ 
   subsets: ["latin"],
@@ -54,6 +55,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${syne.variable} ${inter.variable}`}>
       <body className="font-sans antialiased flex flex-col min-h-screen" suppressHydrationWarning>
+        <LoadingScreen />
         <TopNavbar />
         <Navbar />
         <main className="flex-1">
@@ -63,7 +65,7 @@ export default function RootLayout({
         {/* <Analytics /> */}
         <WhatsAppButton />
         <ScrollToTop />
-        <GoogleTranslate />
+        {/* <GoogleTranslate /> */}
       </body>
     </html>
   )

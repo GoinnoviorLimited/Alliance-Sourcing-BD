@@ -72,7 +72,7 @@ export function Navbar() {
 
           {/* Mobile UI (Language Switcher + Menu Button) */}
           <div className="md:hidden flex items-center gap-3">
-            <LanguageSwitcher className="text-slate-700 border-slate-200 bg-slate-50 hover:bg-slate-100 text-[12px] px-2" />
+            {/* <LanguageSwitcher className="text-slate-700 border-slate-200 bg-slate-50 hover:bg-slate-100 text-[12px] px-2" /> */}
             
             <button
               onClick={() => setIsOpen(!isOpen)}

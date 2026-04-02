@@ -44,9 +44,9 @@ export function TopNavbar() {
             </a>
           </div>
           
-          <div className="h-4 w-px bg-white/20" />
+          {/* <div className="h-4 w-px bg-white/20" /> */}
           
-          <LanguageSwitcher className="hover:text-cyan-400 border-white/20 bg-white/5 hover:bg-white/10" />
+          {/* <LanguageSwitcher className="hover:text-cyan-400 border-white/20 bg-white/5 hover:bg-white/10" /> */}
         </div>
       </div>
     </div>
