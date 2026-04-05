@@ -37,13 +37,25 @@ export default function ContactPage() {
             </div>
             <h3 className="text-xl font-bold text-slate-900 mb-2" style={{ fontFamily: "var(--font-syne)" }}>Email</h3>
             <p className="text-slate-500 text-sm mb-6 leading-relaxed">Our friendly team is here to help.</p>
-            <a
+            {/* <a
               href={`mailto:${CONTACT_INFO.email}`}
               className="text-cyan-600 hover:text-cyan-700 font-semibold text-sm inline-flex items-center gap-2 group/link"
             >
               {CONTACT_INFO.email}
               <div className="w-4 h-px bg-cyan-600 transition-all duration-300 group-hover/link:w-8"></div>
-            </a>
+            </a> */}
+            <div className="flex flex-col gap-3">
+              {CONTACT_INFO.email.split(',').map((mail, index) => (
+                <a
+                  key={index}
+                  href={`mailto:${mail.trim()}`}
+                  className="text-cyan-600 hover:text-cyan-700 font-semibold text-sm inline-flex items-center gap-2 group/link w-fit"
+                >
+                  {mail.trim()}
+                  {/* <div className="w-4 h-px bg-cyan-600 transition-all duration-300 group-hover/link:w-8"></div> */}
+                </a>
+              ))}
+            </div>
           </div>
 
           {/* Phone */}
@@ -53,13 +65,18 @@ export default function ContactPage() {
             </div>
             <h3 className="text-xl font-bold text-slate-900 mb-2" style={{ fontFamily: "var(--font-syne)" }}>Phone</h3>
             <p className="text-slate-500 text-sm mb-6 leading-relaxed">Mon-Fri from 9am to 6pm.</p>
-            <a
-              href={`tel:${CONTACT_INFO.phone}`}
-              className="text-cyan-600 hover:text-cyan-700 font-semibold text-sm inline-flex items-center gap-2 group/link"
-            >
-              {CONTACT_INFO.phone}
-              <div className="w-4 h-px bg-cyan-600 transition-all duration-300 group-hover/link:w-8"></div>
-            </a>
+            <div className="flex flex-col gap-3">
+              {CONTACT_INFO.phone.split(',').map((num, index) => (
+                <a
+                  key={index}
+                  href={`tel:${num.trim()}`}
+                  className="text-cyan-600 hover:text-cyan-700 font-semibold text-sm inline-flex items-center gap-2 group/link w-fit"
+                >
+                  {num.trim()}
+                  {/* <div className="w-4 h-px bg-cyan-600 transition-all duration-300 group-hover/link:w-8"></div> */}
+                </a>
+              ))}
+            </div>
           </div>
 
           {/* Office */}

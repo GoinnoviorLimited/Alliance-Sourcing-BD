@@ -41,8 +41,8 @@ export function LoadingScreen() {
         <div className="flex  items-center gap-6 md:gap-10 animate-bounce-soft">
           <div className="relative w-10 h-10 md:w-14 md:h-14">
             <Image
-              src="/logo.jpg"
-              alt="Alliance Sourcing BD"
+              src="/logo2.png"
+              alt="Alliance Apparels Ltd."
               fill
               className="object-contain rounded-xl shadow-xl"
               priority
@@ -53,8 +53,8 @@ export function LoadingScreen() {
 
           <div className="relative w-10 h-10 md:w-14 md:h-14">
             <Image
-              src="/logo2.png"
-              alt="Alliance Apparels Ltd."
+              src="/logo.jpg"
+              alt="Alliance Sourcing BD"
               fill
               className="object-contain rounded-xl shadow-xl"
               priority

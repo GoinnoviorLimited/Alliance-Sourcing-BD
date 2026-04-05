@@ -5,8 +5,9 @@ export const SITE_DESCRIPTION =
   "Professional buying & sourcing services for apparel, garments, and industrial manufacturing";
 
 export const CONTACT_INFO = {
-  email: "faroque@alliancebdltd.com",
-  phone: "+880 1972-438732",
+  // email: "faroque@alliancebdltd.com",
+  email: "info@alliancebdltd.com,mansur@alliancebdltd.com, khan@alliancebdltd.com, faroque@alliancebdltd.com",
+  phone: "+880 1972-438732, +880 171423-8182",
   address: "Asha Plaza (2nd floor), Hemayetpur, Savar, Dhaka, Bangladesh",
   mapUrl: "https://www.google.com/maps",
   mapEmbedUrl:
@@ -15,9 +16,9 @@ export const CONTACT_INFO = {
 export const NAVIGATION = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
-  { label: "Buying House", href: "/buying-house" },
   { label: "Factory & Machinery", href: "/factory-machinery" },
-  { label: "Contact", href: "/contact" },
+  { label: "Sister Concern", href: "/buying-house" },
+  { label: "Contact Us", href: "/contact" },
 ];
 
 export const SERVICES = [

@@ -24,7 +24,7 @@ export function ServicesSection({ data }: { data: ServicesSectionData[] }) {
     <>
       {data.map((section, index) => {
         // To slightly distinguish multiple sections if there are many, we can alternate background
-        const bgColor = index % 2 === 0 ? "bg-linear-to-b from-blue-50 to-white" : "bg-white";
+        const bgColor = index % 2 === 0 ? "bg-blue-50" : "bg-white";
 
         return (
           <div key={section._id} className={bgColor}>

@@ -37,7 +37,7 @@ export function Footer() {
           </div>
 
           {/* Contact */}
-          <div>
+          {/* <div>
             <h3 className="font-semibold mb-4">Contact</h3>
             <ul className="space-y-2 text-sm text-slate-400">
               <li>
@@ -51,6 +51,36 @@ export function Footer() {
                 </a>
               </li>
               <li>{CONTACT_INFO.address}</li>
+            </ul>
+          </div> */}
+
+          <div>
+            <h3 className="font-semibold mb-4 text-white">Contact</h3>
+            <ul className="space-y-3 text-sm text-slate-400">
+              {CONTACT_INFO.email.split(',').map((mail, index) => (
+                <li key={`email-${index}`}>
+                  <a
+                    href={`mailto:${mail.trim()}`}
+                    className="hover:text-cyan-400 transition-colors block"
+                  >
+                    {mail.trim()}
+                  </a>
+                </li>
+              ))}
+
+              {CONTACT_INFO.phone.split(',').map((num, index) => (
+                <li key={`phone-${index}`}>
+                  <a
+                    href={`tel:${num.trim()}`}
+                    className="hover:text-cyan-400 transition-colors block"
+                  >
+                    {num.trim()}
+                  </a>
+                </li>
+              ))}
+
+              {/* ঠিকানা */}
+              <li className="pt-1">{CONTACT_INFO.address}</li>
             </ul>
           </div>
 

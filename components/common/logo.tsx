@@ -38,18 +38,19 @@ export function Logo() {
       className="flex items-center gap-4 hover:opacity-80 transition-opacity duration-300"
     >
       <LogoItem
-        src="/logo.jpg"
-        title="ALLIANCE"
-        subtitle="SOURCING BD"
-      />
-
-      {/* Divider */}
-      <div className="h-8 w-px bg-gray-300"></div>
-      <LogoItem
         src="/logo2.png"
         title="ALLIANCE"
         subtitle="APPARELS LTD."
       />
+      
+      {/* Divider */}
+      <div className="h-8 w-px bg-gray-300"></div>
+      <LogoItem
+        src="/logo.jpg"
+        title="ALLIANCE"
+        subtitle="SOURCING BD"
+      />
+      
     </Link>
   );
 }

@@ -142,7 +142,7 @@ export default function CatalogSection({
     <>
       {[...catalogs].reverse().map((catalog, index) => {
         const isEven = index % 2 === 0;
-        const bgColor = isEven ? "bg-blue-50 " : "bg-white";
+        const bgColor = isEven ? "bg-blue-50" : "bg-white";
 
         return (
           <section key={catalog._id} className={`w-full ${bgColor}`}>
