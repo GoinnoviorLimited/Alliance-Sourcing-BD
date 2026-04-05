@@ -25,7 +25,7 @@ export default function BuyingHousePage() {
       {/* Page Header */}
       <PageHeader
         title="Professional Sourcing Services"
-        subtitle="State-of-the-art facilities meeting the highest global ethical and quality standards through innovation and precision. Your premier partner in seamless garments manufacturing and apparels sourcing"
+        subtitle="State-of-the-art facilities meeting the highest global ethical and quality standards through innovation and precision. Your premier partner in seamless garments manufacturing and apparels sourcing."
         backgroundImage="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3105a5e1e47bd6c51724d9ef89fd867243462197-jU21omSUdf2kP7KEQVK23sTylm4Hqd.jpg"
         breadcrumbs={[
           { label: "Home", href: "/" },
