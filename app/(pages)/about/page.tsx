@@ -90,6 +90,7 @@ export default async function AboutPage() {
           label: "Contact Us",
           href: `mailto:${CONTACT_INFO.email}`,
         }}
+        backgroundImage="https://i.postimg.cc/3NcsYzxX/multi-colored-garments-hanging-coathangers-boutique-store-generated-by-ai.jpg"
       />
     </>
   );
