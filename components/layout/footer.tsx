@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Facebook, Instagram, Linkedin, Twitter, Youtube, MessageCircle } from "lucide-react";
 import { Logo } from "@/components/common/logo";
 import { NAVIGATION, CONTACT_INFO } from "@/lib/constants";
@@ -124,9 +125,29 @@ export function Footer() {
         <div className="border-t border-slate-800"></div>
 
         {/* Bottom */}
-        <div className="mt-8 flex flex-col md:flex-row justify-between items-center text-sm text-slate-400">
-          <p>&copy; {currentYear} Alliance Sourcing BD. All rights reserved.</p>
-          <div className="flex gap-6 mt-4 md:mt-0">
+        <div className="mt-8 flex flex-col md:flex-row justify-between items-center text-sm text-slate-400 gap-4 md:gap-0">
+          <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
+            <p>&copy; {currentYear} Alliance Sourcing BD. All rights reserved.</p>
+            <span className="hidden md:inline-block w-1.5 h-1.5 rounded-full bg-slate-600"></span>
+            <p className="flex items-center gap-1">
+              <span className="text-slate-400">Developed by</span>
+              <a
+                href="https://www.goinnovior.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative inline-block transition-transform hover:scale-105"
+              >
+                <Image
+                  src="/goinnovior-logo.png"
+                  alt="Goinnovior Limited"
+                  width={100}
+                  height={24}
+                  className="opacity-80 group-hover:opacity-100 transition-opacity"
+                />
+              </a>
+            </p>
+          </div>
+          <div className="flex flex-wrap justify-center gap-4 md:gap-6 mt-4 md:mt-0">
             <Link href="#" className="hover:text-cyan-400 transition-colors">
               Privacy policy
             </Link>
